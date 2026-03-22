@@ -7,13 +7,43 @@
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAALElEQVR4nGNgGAWjYBQMA3CGxmjUglELRi2ghwX/z9EWjVowasGoBaMWEIEA6h+yrnmGiMIAAAAASUVORK5CYII=">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d0d0f;--surface:#16161a;--surface2:#1e1e24;--border:#2a2a35;--text:#e8e6e0;--muted:#7a7a8a;--accent:#e8a020;--accent2:#5b9cf6;--accent3:#5ec97e;--accent4:#e05c8a;--accent5:#b07efc;--red:#e05050;}
+:root{
+  --bg:#0d0d0f;--surface:#16161a;--surface2:#1e1e24;--border:#2a2a35;
+  --text:#e8e6e0;--muted:#7a7a8a;--accent:#e8a020;--accent2:#5b9cf6;
+  --accent3:#5ec97e;--accent4:#e05c8a;--accent5:#b07efc;--red:#e05050;
+}
+[data-theme="light"]{
+  --bg:#f5f3ef;--surface:#ffffff;--surface2:#f0ede8;--border:#ddd9d0;
+  --text:#1a1a1f;--muted:#6b6b7a;--accent:#b8780a;--accent2:#2563eb;
+  --accent3:#16a34a;--accent4:#db2777;--accent5:#7c3aed;--red:#dc2626;
+}
+@media(prefers-color-scheme:light){
+  [data-theme="system"]{
+    --bg:#f5f3ef;--surface:#ffffff;--surface2:#f0ede8;--border:#ddd9d0;
+    --text:#1a1a1f;--muted:#6b6b7a;--accent:#b8780a;--accent2:#2563eb;
+    --accent3:#16a34a;--accent4:#db2777;--accent5:#7c3aed;--red:#dc2626;
+  }
+}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:13px;line-height:1.5}
-.nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:2px;padding:8px 12px}
-.nav-btn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 10px;border-radius:6px;border:1px solid transparent;cursor:pointer;background:transparent;color:var(--muted);transition:all 0.15s}
-.nav-btn:hover{color:var(--text);background:var(--surface2)}
-.nav-btn.active{background:var(--accent);color:#0d0d0f;border-color:var(--accent);font-weight:600}
+.nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:4px;padding:0 12px;height:44px}
+.nav-group{position:relative;display:flex;align-items:center;height:100%}
+.nav-group-btn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:0 10px;height:100%;border:none;cursor:pointer;background:transparent;color:var(--muted);transition:all 0.15s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.nav-group-btn:hover{color:var(--text)}
+.nav-group-btn.has-active{color:var(--accent);font-weight:600}
+.nav-group-btn .arrow{font-size:8px;opacity:0.5;transition:transform 0.15s}
+.nav-group:hover .arrow{transform:rotate(180deg)}
+.nav-dropdown{position:absolute;top:44px;left:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:6px;min-width:180px;display:none;flex-direction:column;gap:2px;box-shadow:0 8px 24px rgba(0,0,0,0.3);z-index:200}
+.nav-group:hover .nav-dropdown{display:flex}
+.nav-dd-btn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:7px 10px;border-radius:6px;border:none;cursor:pointer;background:transparent;color:var(--muted);transition:all 0.15s;text-align:left;white-space:nowrap}
+.nav-dd-btn:hover{color:var(--text);background:var(--surface2)}
+.nav-dd-btn.active{background:rgba(232,160,32,0.15);color:var(--accent);font-weight:600}
+.nav-divider{width:1px;height:20px;background:var(--border);margin:0 4px}
+.nav-title{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--accent);padding:0 10px;white-space:nowrap;letter-spacing:0.5px}
+.theme-toggle{display:flex;align-items:center;gap:3px;margin-left:auto;padding:4px 6px;background:var(--surface2);border-radius:8px;border:1px solid var(--border)}
+.theme-btn{font-size:13px;width:28px;height:26px;border-radius:6px;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;justify-content:center;transition:all 0.15s;opacity:0.5}
+.theme-btn:hover{opacity:0.8;background:var(--border)}
+.theme-btn.active{background:var(--accent);opacity:1;box-shadow:0 1px 4px rgba(0,0,0,0.3)}
 .section{display:none;padding:20px 16px 60px;max-width:1200px;margin:0 auto}
 .section.active{display:block}
 .sec-header{margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
@@ -170,22 +200,59 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 <body>
 
 <nav class="nav">
-  <button class="nav-btn active" onclick="show('grammar')">📐 Grammar</button>
-  <button class="nav-btn" onclick="show('cases')">🔡 Cases & Rules</button>
-  <button class="nav-btn" onclick="show('tenses')">⏱ Tenses</button>
-  <button class="nav-btn" onclick="show('adjectives')">🎨 Adjectives</button>
-  <button class="nav-btn" onclick="show('connectors')">🔗 Connectors</button>
-  <button class="nav-btn" onclick="show('specialverbs')">⚙️ Special Verbs</button>
-  <button class="nav-btn" onclick="show('verbprep')">📌 Verb+Prep (250)</button>
-  <button class="nav-btn" onclick="show('passiv')">🔄 Passiv</button>
-  <button class="nav-btn" onclick="show('relativsatz')">🧩 Relativsatz & Genitiv</button>
-  <button class="nav-btn" onclick="show('vocab')">📚 Vocab</button>
-  <button class="nav-btn" onclick="show('phrases')">💬 Phrases</button>
-  <button class="nav-btn" onclick="show('synonyms')">🔀 Synonyms</button>
-  <button class="nav-btn" onclick="show('expressions')">🗝 Fixed Expressions</button>
-  <button class="nav-btn" onclick="show('writing')">✍️ Writing Exam</button>
-  <button class="nav-btn" onclick="show('listening')">👂 Listening</button>
-  <button class="nav-btn" onclick="show('exam')">🎯 Exam Sim</button>
+  <span class="nav-title">🇩🇪 B1</span>
+  <div class="nav-divider"></div>
+
+  <!-- GROUP 1: Grammar -->
+  <div class="nav-group">
+    <button class="nav-group-btn" id="grp-grammar">📐 Grammar <span class="arrow">▾</span></button>
+    <div class="nav-dropdown">
+      <button class="nav-dd-btn" onclick="show('grammar')">📐 Foundations</button>
+      <button class="nav-dd-btn" onclick="show('cases')">🔡 Cases & Rules</button>
+      <button class="nav-dd-btn" onclick="show('adjectives')">🎨 Adjectives</button>
+    </div>
+  </div>
+
+  <!-- GROUP 2: Verbs & Tenses -->
+  <div class="nav-group">
+    <button class="nav-group-btn" id="grp-verbs">⏱ Verbs <span class="arrow">▾</span></button>
+    <div class="nav-dropdown">
+      <button class="nav-dd-btn" onclick="show('tenses')">⏱ Tenses</button>
+      <button class="nav-dd-btn" onclick="show('specialverbs')">⚙️ Special Verbs</button>
+      <button class="nav-dd-btn" onclick="show('verbprep')">📌 Verb + Prep (250)</button>
+      <button class="nav-dd-btn" onclick="show('passiv')">🔄 Passiv</button>
+      <button class="nav-dd-btn" onclick="show('relativsatz')">🧩 Relativsatz & Genitiv</button>
+    </div>
+  </div>
+
+  <!-- GROUP 3: Connectors & Vocab -->
+  <div class="nav-group">
+    <button class="nav-group-btn" id="grp-vocab">📚 Vocab <span class="arrow">▾</span></button>
+    <div class="nav-dropdown">
+      <button class="nav-dd-btn" onclick="show('connectors')">🔗 Connectors</button>
+      <button class="nav-dd-btn" onclick="show('vocab')">📚 Vocabulary</button>
+      <button class="nav-dd-btn" onclick="show('synonyms')">🔀 Synonyms</button>
+      <button class="nav-dd-btn" onclick="show('expressions')">🗝 Fixed Expressions</button>
+    </div>
+  </div>
+
+  <!-- GROUP 4: Exam Skills -->
+  <div class="nav-group">
+    <button class="nav-group-btn" id="grp-exam">🎯 Exam <span class="arrow">▾</span></button>
+    <div class="nav-dropdown">
+      <button class="nav-dd-btn" onclick="show('writing')">✍️ Writing</button>
+      <button class="nav-dd-btn" onclick="show('listening')">👂 Listening</button>
+      <button class="nav-dd-btn" onclick="show('phrases')">💬 Phrases</button>
+      <button class="nav-dd-btn" onclick="show('exam')">🎯 Exam Simulation</button>
+    </div>
+  </div>
+
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button class="theme-btn" id="tbtn-dark"   onclick="setTheme('dark')"   title="Dark">🌙</button>
+    <button class="theme-btn" id="tbtn-system" onclick="setTheme('system')" title="System">💻</button>
+    <button class="theme-btn" id="tbtn-light"  onclick="setTheme('light')"  title="Light">☀️</button>
+  </div>
 </nav>
 
 <!-- ══════════════════════ GRAMMAR ══════════════════════ -->
@@ -2541,13 +2608,56 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 </section>
 
 <script>
+// Map each section to its parent group
+const sectionGroups = {
+  grammar:'grp-grammar', cases:'grp-grammar', adjectives:'grp-grammar',
+  tenses:'grp-verbs', specialverbs:'grp-verbs', verbprep:'grp-verbs', passiv:'grp-verbs', relativsatz:'grp-verbs',
+  connectors:'grp-vocab', vocab:'grp-vocab', synonyms:'grp-vocab', expressions:'grp-vocab',
+  writing:'grp-exam', listening:'grp-exam', phrases:'grp-exam', exam:'grp-exam'
+};
+
 window.show = function(id) {
+  // Hide all sections
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  // Clear all dropdown button highlights
+  document.querySelectorAll('.nav-dd-btn').forEach(b => b.classList.remove('active'));
+  // Clear all group button highlights
+  document.querySelectorAll('.nav-group-btn').forEach(b => b.classList.remove('has-active'));
+
+  // Show selected section
   document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
+
+  // Highlight the clicked dropdown button
+  document.querySelectorAll('.nav-dd-btn').forEach(b => {
+    if(b.getAttribute('onclick') === "show('" + id + "')") b.classList.add('active');
+  });
+
+  // Highlight the parent group button
+  const grp = sectionGroups[id];
+  if(grp) document.getElementById(grp).classList.add('has-active');
+
   window.scrollTo(0,0);
 }
+
+window.setTheme = function(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+  var btn = document.getElementById('tbtn-' + theme);
+  if(btn) btn.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Init theme
+  var saved = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  var btn = document.getElementById('tbtn-' + saved);
+  if(btn) btn.classList.add('active');
+
+  // Highlight default active section group
+  var defaultGrp = sectionGroups['grammar'];
+  if(defaultGrp) document.getElementById(defaultGrp).classList.add('has-active');
+});
 </script>
 </body>
 </html>
