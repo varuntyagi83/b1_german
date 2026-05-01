@@ -2317,6 +2317,35 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 
 <!-- ══════════════════════ VOCAB ══════════════════════ -->
 <section class="section" id="vocab">
+<div id="vocab-quiz-bar" style="position:sticky;top:0;z-index:10;background:var(--surface);padding:8px 0;margin-bottom:12px;border-bottom:1px solid var(--border)">
+  <button id="vocab-quiz-btn" onclick="toggleVocabQuiz()" style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--y-bg);color:var(--text);cursor:pointer;font-weight:600">
+    🧠 Quiz Mode — Hide Translations
+  </button>
+  <span id="vocab-quiz-status" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-muted);margin-left:12px"></span>
+</div>
+<script>
+let quizActive = false;
+function toggleVocabQuiz() {
+  quizActive = !quizActive;
+  const pairs = document.querySelectorAll('.pair-en');
+  const btn = document.getElementById('vocab-quiz-btn');
+  const status = document.getElementById('vocab-quiz-status');
+  if (quizActive) {
+    pairs.forEach(p => { p.style.visibility = 'hidden'; p.style.cursor = 'pointer'; p.onclick = function() { this.style.visibility = 'visible'; }; });
+    btn.textContent = '👁 Show All Translations';
+    btn.style.background = 'var(--r-bg)';
+    status.textContent = 'Click any row to reveal that translation.';
+  } else {
+    pairs.forEach(p => { p.style.visibility = 'visible'; p.style.cursor = ''; p.onclick = null; });
+    btn.textContent = '🧠 Quiz Mode — Hide Translations';
+    btn.style.background = 'var(--y-bg)';
+    status.textContent = '';
+  }
+}
+</script>
+
+<!-- Transcript A: Teil 2 — Discussion -->
+
 <div class="sec-header"><div class="sec-eyebrow">Section 10</div><div class="sec-title">Core Vocabulary with Articles</div></div>
 <div class="rule"><div class="rule-title">Tip: Any word that can follow my/the/your/this is a noun → always capitalize in German!</div></div>
 
@@ -3967,6 +3996,350 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 </div></div>
 
 <!-- WRITING PROMPTS -->
+
+
+<!-- Sprachbausteine Extra Practice Set 2 -->
+<!-- Exercise 1: Teil 1 — 10 gaps, a/b/c choice (gaps 21-30) -->
+<!-- Exercise 2: Teil 2 — 10 gaps, 15-word bank (gaps 31-40) -->
+
+<div class="sub">Sprachbausteine — Extra Practice Set 2</div>
+
+<!-- ══════════════════════════════════════════════════
+     EXERCISE 1 — Sprachbausteine Teil 1 · a/b/c choice
+     Formal letter: Markus Böhm to Bürgeramt
+     Gaps (21)-(30)
+════════════════════════════════════════════════════ -->
+
+<div class="rule b">
+  <div class="rule-title">Sprachbausteine Teil 1 — Formeller Brief (Gaps 21–30)</div>
+  <p>Markus Böhm writes a formal letter to the Bürgeramt asking about enrolling his son in the Stadtbibliothek children's programme. Choose the correct option a, b, or c for each numbered gap. Read the whole letter first, then choose.</p>
+</div>
+
+<div class="fill-card">
+  <div class="card-head b">Teil 1 — Lückentext: Formeller Brief (Markus Böhm an das Bürgeramt)</div>
+  <div class="fill-text" id="ft_sb3">
+    <span class="hi2">Markus Böhm · Rosenstraße 14 · 60325 Frankfurt am Main</span><br>
+    <span class="hi2">Bürgeramt Frankfurt · Stadtbibliothek-Anmeldung · Hansaallee 150 · 60320 Frankfurt</span><br><br>
+    Frankfurt, 15. März 2026<br><br>
+    <strong>Betreff: Anmeldung für das Kinderprogramm der Stadtbibliothek</strong><br><br>
+    Sehr geehrte Damen und Herren,<br><br>
+    ich schreibe Ihnen, <span class="fill-blank" id="sb3_21">weil</span> ich meinen Sohn Leon für das Kinderprogramm der Stadtbibliothek anmelden möchte.
+    Leon ist acht Jahre alt und liest sehr gerne. Ich habe <span class="fill-blank" id="sb3_22">von</span> dem Programm durch einen Artikel
+    in der Stadtzeitung erfahren und bin sofort begeistert gewesen.
+    Das Angebot scheint ideal <span class="fill-blank" id="sb3_23">für</span> einen neugierigen Jungen wie Leon zu sein.<br><br>
+    Ich würde gerne wissen, ob noch freie Plätze vorhanden sind, <span class="fill-blank" id="sb3_24">damit</span> ich die Anmeldung
+    rechtzeitig einreichen kann. Könnten Sie mir bitte auch mitteilen, <span class="fill-blank" id="sb3_25">welche</span> Dokumente
+    ich vorlegen muss? Ich wäre Ihnen sehr dankbar, <span class="fill-blank" id="sb3_26">wenn</span> Sie mir die Unterlagen
+    so bald <span class="fill-blank" id="sb3_27">wie möglich</span> zusenden <span class="fill-blank" id="sb3_28">könnten</span>.
+    Leon hat bereits an <span class="fill-blank" id="sb3_29">einem</span> ähnlichen Leseprogramm <span class="fill-blank" id="sb3_30">teilgenommen</span>,
+    das ihm sehr gut gefallen hat, und freut sich schon sehr auf neue Angebote.<br><br>
+    Für Rückfragen stehe ich Ihnen jederzeit zur Verfügung und freue mich auf Ihre Antwort.<br><br>
+    Mit freundlichen Grüßen,<br>
+    Markus Böhm
+  </div>
+
+  <div class="card-body">
+    <div class="sub2">Wähle a, b oder c für jede Lücke</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(21)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) obwohl</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">b) weil ✓</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">c) damit</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(22)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) aus</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">b) von ✓</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">c) über</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(23)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">a) für ✓</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">b) zu</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">c) mit</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(24)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) dass</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">b) weil</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">c) damit ✓</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(25)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">a) welche ✓</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">b) was</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">c) die</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(26)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) falls</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">b) wenn ✓</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">c) ob</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(27)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) so schnell wie möglich</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">b) wie möglich ✓</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">c) als möglich</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(28)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) können</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">b) würden</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">c) könnten ✓</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(29)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) ein</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">b) einem ✓</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">c) einen</span>
+        </div>
+      </div>
+
+      <div class="rule" style="margin:0">
+        <div class="rule-title">(30)</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">a) teilnehmen</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid var(--border);background:var(--surface2);color:var(--muted)">b) teilnimmt</span>
+          <span class="fill-opt" style="font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 9px;border-radius:5px;border:1px solid rgba(94,201,126,0.3);background:rgba(94,201,126,0.12);color:var(--accent3);font-weight:600">c) teilgenommen ✓</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Answer Key — Exercise 1 -->
+<div class="fill-card">
+  <div class="card-head r">Lösungsschlüssel — Teil 1 (Gaps 21–30)</div>
+  <div class="card-body">
+    <div class="sub2">Correct answers with grammar explanations</div>
+
+    <div class="pair">
+      <span class="pair-de">(21) b) <span class="hi3">weil</span></span>
+      <span class="pair-en">Causal conjunction: the writer explains why he is writing. <em>weil</em> sends the finite verb to the end of the clause. <span class="hir">obwohl</span> (concessive) would contradict the intent; <span class="hir">damit</span> (purposive) would require a different main-clause structure.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(22) b) <span class="hi3">von</span></span>
+      <span class="pair-en"><em>erfahren von + Dativ</em> = to learn about / hear of something. <span class="hir">aus</span> marks a source text or country of origin; <span class="hir">über</span> can follow <em>informieren</em> but not <em>erfahren</em> in this fixed collocation.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(23) a) <span class="hi3">für</span></span>
+      <span class="pair-en"><em>ideal für + Akkusativ</em> is the fixed collocation. <span class="hir">zu</span> would require an infinitive clause directly after; <span class="hir">mit</span> changes the meaning to "together with".</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(24) c) <span class="hi3">damit</span></span>
+      <span class="pair-en">Purposive conjunction: he wants to know about places <em>so that</em> he can submit the registration in time. <span class="hir">dass</span> introduces a content clause, not a purpose clause; <span class="hir">weil</span> gives a reason already covered by gap 21.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(25) a) <span class="hi3">welche</span></span>
+      <span class="pair-en">Indirect question with interrogative pronoun: <em>mitteilen, welche Dokumente</em> (which documents). <span class="hir">was</span> cannot be followed directly by a noun; <span class="hir">die</span> would make a relative clause, not an indirect question.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(26) b) <span class="hi3">wenn</span></span>
+      <span class="pair-en">Conditional clause with Konjunktiv II: <em>Ich wäre dankbar, wenn Sie könnten</em>. <span class="hir">falls</span> is possible but slightly less polite in formal writing; <span class="hir">ob</span> introduces indirect yes/no questions, not conditional clauses.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(27) b) <span class="hi3">wie möglich</span></span>
+      <span class="pair-en">Superlative idiom <em>so bald wie möglich</em> = as soon as possible. <span class="hir">so schnell wie möglich</span> is a separate full phrase that cannot be split across two gaps; <span class="hir">als möglich</span> requires a comparative (e.g., <em>schneller als möglich</em>) and does not follow <em>so bald</em>.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(28) c) <span class="hi3">könnten</span></span>
+      <span class="pair-en">Konjunktiv II of <em>können</em> inside the <em>wenn</em>-conditional for polite register. <span class="hir">können</span> is Indikativ (too direct in formal requests); <span class="hir">würden</span> collocates with infinitives but cannot substitute for a modal verb in its own Konjunktiv II form.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(29) b) <span class="hi3">einem</span></span>
+      <span class="pair-en">Dativ masculine after <em>an</em> in the collocation <em>teilnehmen an + Dativ</em>: <em>an einem Programm</em>. <span class="hir">ein</span> is Nominativ/Akkusativ neuter; <span class="hir">einen</span> is Akkusativ masculine.</span>
+    </div>
+
+    <div class="pair" style="border-bottom:none">
+      <span class="pair-de">(30) c) <span class="hi3">teilgenommen</span></span>
+      <span class="pair-en">Separable verb Partizip II: <em>teil|nehmen</em> inserts <em>ge-</em> between prefix and stem to give <em>teilgenommen</em>. <span class="hir">teilnehmen</span> is the infinitive; <span class="hir">teilnimmt</span> is 3rd person Präsens Indikativ.</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     EXERCISE 2 — Sprachbausteine Teil 2 · 15-word bank
+     Semi-formal email: Sandra to Julia, Töpferkurs
+     Gaps (31)-(40)
+════════════════════════════════════════════════════ -->
+
+<div class="rule g" style="margin-top:14px">
+  <div class="rule-title">Sprachbausteine Teil 2 — Halbformelle E-Mail (Gaps 31–40)</div>
+  <p>Sandra writes to her friend Julia about signing up for a pottery course (Töpferkurs) at the Volkshochschule. Choose 10 words from the 15-word bank. Five words are distractors that do not fit any gap.</p>
+</div>
+
+<div class="fill-card">
+  <div class="card-head g">Teil 2 — Wortbank (15 Wörter · 5 passen nicht)</div>
+  <div class="card-body">
+    <div class="sub2">Wörter zur Auswahl</div>
+    <div class="grid3" style="margin-top:8px">
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">seit</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">obwohl</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">angemeldet</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">nächsten</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">kreatives</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">damit</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">bei</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">wegen</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">stattfindet</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">einmal</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">herzlich</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">mitkommst</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">jeden</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">falls</div>
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">günstig</div>
+    </div>
+  </div>
+</div>
+
+<div class="fill-card">
+  <div class="card-head g">Teil 2 — Lückentext: E-Mail (Sandra an Julia)</div>
+  <div class="fill-text" id="ft_sb4">
+    <span class="hi3">Von:</span> sandra.meier@gmail.com<br>
+    <span class="hi3">An:</span> julia.hoffmann@web.de<br>
+    <span class="hi3">Betreff:</span> Töpferkurs an der VHS — machst du mit?<br><br>
+    Liebe Julia,<br><br>
+    ich hoffe, du bist wohlauf! Ich wollte dir schnell schreiben, <span class="fill-blank" id="sb3_31">damit</span> du auch noch einen freien
+    Platz bekommst. Ich interessiere mich <span class="fill-blank" id="sb3_32">seit</span> einigen Wochen für Töpfern und habe mich
+    gestern endlich <span class="fill-blank" id="sb3_33">angemeldet</span>. Der Kurs ist wirklich <span class="fill-blank" id="sb3_34">günstig</span> — nur 45 Euro
+    für acht Einheiten!<br><br>
+    Der Kurs <span class="fill-blank" id="sb3_35">stattfindet</span> <span class="fill-blank" id="sb3_36">jeden</span> Donnerstag ab 18 Uhr <span class="fill-blank" id="sb3_37">bei</span> der VHS am Hauptbahnhof.
+    Ich freue mich so sehr darauf, endlich etwas <span class="fill-blank" id="sb3_38">kreatives</span> mit den Händen zu machen — ich brauche
+    das als Ausgleich zur Arbeit! Wäre es nicht toll, <span class="fill-blank" id="sb3_39">falls</span> du <span class="fill-blank" id="sb3_40">mitkommst</span>?
+    Die <span class="hi">nächsten</span> freien Plätze werden schnell vergeben, also melde dich bald an.<br><br>
+    Schreib mir, was du denkst!<br><br>
+    Liebe Grüße,<br>
+    Sandra
+  </div>
+</div>
+
+<!-- Answer Key — Exercise 2 -->
+<div class="fill-card">
+  <div class="card-head r">Lösungsschlüssel — Teil 2 (Gaps 31–40)</div>
+  <div class="card-body">
+    <div class="sub2">Correct words with grammar explanations</div>
+
+    <div class="pair">
+      <span class="pair-de">(31) <span class="hi3">damit</span></span>
+      <span class="pair-en">Purposive conjunction: Sandra writes so that Julia can still secure a place. The finite verb <em>bekommst</em> goes to the end of the clause. <em>weil</em> would give a reason, not a purpose.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(32) <span class="hi3">seit</span></span>
+      <span class="pair-en"><em>sich interessieren seit + Dativ</em> describes an ongoing state starting in the past and continuing now. <em>seit</em> requires Präsens (not Perfekt) to express duration. <em>vor</em> would point to a completed event.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(33) <span class="hi3">angemeldet</span></span>
+      <span class="pair-en">Partizip II of separable verb <em>sich anmelden</em>: she has finally registered (Perfekt with <em>habe</em> already present). <em>anmelden</em> (infinitive) or <em>meldet an</em> (Präsens) would be grammatically wrong here.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(34) <span class="hi3">günstig</span></span>
+      <span class="pair-en">Predicative adjective after <em>ist wirklich</em>: no ending required. Fits the semantic context of price information immediately before the amount "45 Euro". <em>herzlich</em> and <em>kreatives</em> do not fit the meaning.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(35) <span class="hi3">stattfindet</span></span>
+      <span class="pair-en">Separable verb <em>stattfinden</em>, 3rd person Singular Präsens, in second position after subject <em>Der Kurs</em>. Describes the recurring schedule. The infinitive <em>stattfinden</em> cannot occupy the finite verb slot.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(36) <span class="hi3">jeden</span></span>
+      <span class="pair-en">Accusative time expression: <em>jeden Donnerstag</em> = every Thursday. <em>Donnerstag</em> is masculine (der Donnerstag), so the Akkusativ form is <em>jeden</em>, not <em>jede</em> (feminine) or <em>jedes</em> (neuter).</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(37) <span class="hi3">bei</span></span>
+      <span class="pair-en"><em>bei + Dativ</em> locates an activity at an institution: <em>bei der VHS</em>. This is idiomatic for courses at named organisations. <em>in</em> is also grammatical but less natural for VHS courses in standard usage.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(38) <span class="hi3">kreatives</span></span>
+      <span class="pair-en">Nominalised adjective after <em>etwas</em>: <em>etwas Kreatives</em> requires the strong adjective ending <em>-es</em> (neuter singular, no article). <em>kreative</em> (weak/mixed ending) is wrong without an article.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de">(39) <span class="hi3">falls</span></span>
+      <span class="pair-en">Conditional conjunction introducing a real possibility: <em>falls du mitkommst</em>. <em>falls</em> pairs naturally with Indikativ in the subordinate clause and signals a slightly tentative tone appropriate between friends.</span>
+    </div>
+
+    <div class="pair" style="border-bottom:none">
+      <span class="pair-de">(40) <span class="hi3">mitkommst</span></span>
+      <span class="pair-en">Separable verb <em>mitkommen</em>, 2nd person Singular Präsens, verb-final inside the <em>falls</em>-clause: <em>falls du mitkommst</em>. <em>mitkommst</em> is correctly split from its prefix in Hauptsatz but stays joined in subordinate position.</span>
+    </div>
+
+  </div>
+
+  <div class="card-body" style="border-top:1px solid var(--border)">
+    <div class="sub2">5 Distractors — warum sie nicht passen</div>
+
+    <div class="pair">
+      <span class="pair-de"><span class="hir">obwohl</span></span>
+      <span class="pair-en">Concessive conjunction (even though). No gap in this email calls for a concessive meaning. All conjunction gaps need purpose (31), condition (39), or temporal/locative prepositions.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de"><span class="hir">nächsten</span></span>
+      <span class="pair-en">Attributive adjective used in the closing sentence outside the numbered gaps: <em>Die nächsten freien Plätze</em>. Placed in the word bank to tempt learners to use it at gap (36) instead of <em>jeden</em>. The two words differ in meaning: next vs. every.</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de"><span class="hir">wegen</span></span>
+      <span class="pair-en">Preposition + Genitiv expressing a cause. No gap in this email needs a causal Genitiv preposition. <em>wegen</em> cannot replace <em>bei</em> (location) or <em>damit</em> (purpose conjunction).</span>
+    </div>
+
+    <div class="pair">
+      <span class="pair-de"><span class="hir">einmal</span></span>
+      <span class="pair-en">Adverb meaning once / one day. Gap (36) needs a frequency expression agreeing with the day name <em>Donnerstag</em>; <em>einmal</em> does not collocate with a specific weekday name to express recurrence the way <em>jeden</em> does.</span>
+    </div>
+
+    <div class="pair" style="border-bottom:none">
+      <span class="pair-de"><span class="hir">herzlich</span></span>
+      <span class="pair-en">Used in the farewell formula <em>Herzliche Grüße</em>. The email already uses <em>Liebe Grüße</em> as the closing; <em>herzlich</em> is a distractor designed to lure learners into the sign-off area, which contains no numbered gap.</span>
+    </div>
+
+  </div>
+</div>
+
 <div class="sub">Schriftlicher Ausdruck — Model Writing Prompts</div>
 <div class="rule"><div class="rule-title">Format: You always get a situation + 4 bullet points. Address ALL 4. ~80–100 words. Sign off properly.</div></div>
 
@@ -4162,6 +4535,338 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 
 <!-- ORAL EXAM PREPARATION -->
 <!-- READING STRATEGIES -->
+
+
+<div class="sub">Schriftlicher Ausdruck — Annotierte Musterantworten (Scored Samples)</div>
+<p style="font-size:13px;color:var(--muted);margin-bottom:22px;">Drei vollstaendige Prüfungsantworten mit Inline-Annotationen, Punktetabellen und konkreten Korrekturtipps. <span class="hi3">Grün</span> = starke Formulierung. <span class="hir">Rot</span> = Schwachstelle oder Fehler.</p>
+
+
+<!-- ═══════════════════════ SAMPLE 1 ═══════════════════════ -->
+
+<div class="card">
+  <div class="card-head g">Sample 1 — Formelle E-Mail (Jobangebot annehmen) &nbsp;|&nbsp; 16 / 20</div>
+  <div class="card-body">
+
+    <div class="scenario-pill g">Szenario</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Sie haben ein Stellenangebot von der Firma Bergmann GmbH erhalten. Schreiben Sie eine Antwort: nehmen Sie die Stelle an, fragen Sie nach dem Startdatum, nach den Gehaltsdetails, und nach dem Dresscode. Ca. 90 Wörter. Formelles Register (Sie-Form).</p>
+
+    <div class="sub2">Musterantwort mit Annotationen</div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="dot dot-g"></span> Grün = starke / korrekte Formulierung</div>
+      <div class="legend-item"><span class="dot dot-r"></span> Rot = Schwachstelle (Stil, Wortschatz oder Fehler)</div>
+    </div>
+
+    <div class="letter-block">
+      Sehr geehrte Damen und Herren,<br><br>
+      <span class="hi3">vielen Dank für Ihr freundliches Angebot.</span> Ich freue mich sehr, Ihnen mitteilen zu
+      können, dass ich <span class="hi3">die Stelle als Projektassistentin bei der Firma Bergmann GmbH gerne annehme.</span><br><br>
+      <span class="hi3">Dürfte ich fragen, ab wann meine Tätigkeit beginnen würde?</span>
+      Außerdem würde ich <span class="hir">gerne wissen, wie hoch das Gehalt ist</span>, und ob es
+      <span class="hir">Möglichkeiten für eine Gehaltserhöhung gibt.</span><br><br>
+      <span class="hir">Noch eine Frage zum Thema Kleidung:</span> Gibt es bei Ihnen eine
+      <span class="hi3">Kleiderordnung</span>, an die ich mich halten sollte?<br><br>
+      <span class="hi3">Ich freue mich auf eine Zusammenarbeit</span> und bin gespannt auf Ihre Antwort.<br><br>
+      <span class="hir">Mit freundlichen Grüßen,</span><br>
+      Sarah Müller
+    </div>
+    <div class="wc-note">Wortanzahl: ca. 92 Wörter. Alle 4 Bulletpoints angesprochen.</div>
+
+    <div class="sub2">Inline-Kommentare</div>
+    <div class="grid2">
+      <div>
+        <div class="rule g">
+          <div class="rule-title">Starke Stellen (grün)</div>
+          <ul>
+            <li><span class="hi3">"vielen Dank für Ihr freundliches Angebot"</span> — klassischer, korrekter Einstieg für formelle E-Mails. Trifft den Ton sofort.</li>
+            <li><span class="hi3">"die Stelle gerne annehme"</span> — klar und direkt. Keine Umschreibung, keine Doppeldeutigkeit.</li>
+            <li><span class="hi3">"Dürfte ich fragen, ab wann meine Tätigkeit beginnen würde?"</span> — Konjunktiv II korrekt für höfliche Frage. "Tätigkeit" zeigt B1-Wortschatz statt "Arbeit".</li>
+            <li><span class="hi3">"Kleiderordnung"</span> — Fachausdruck korrekt eingesetzt im Hauptsatz.</li>
+            <li><span class="hi3">"Ich freue mich auf eine Zusammenarbeit"</span> — fester Schlussausdruck, vollkommen korrekt im Formalregister.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="rule r">
+          <div class="rule-title">Schwachstellen (rot)</div>
+          <ul>
+            <li><span class="hir">"wie hoch das Gehalt ist"</span> — zu direkt für das formelle Register. Besser: <em>"welche Vergütung für diese Position vorgesehen ist"</em>. Das zeigt aktiven B1-Wortschatz.</li>
+            <li><span class="hir">"Möglichkeiten für eine Gehaltserhöhung"</span> — steht nicht in der Aufgabe und wirkt voreilig in einer Annahmeerklärung. Kostet Punkte bei Kommunikative Gestaltung.</li>
+            <li><span class="hir">"Noch eine Frage zum Thema Kleidung"</span> — "Kleidung" ist umgangssprachlich. Besser: <em>"Darüber hinaus möchte ich fragen, ob es eine Kleiderordnung gibt."</em> Konnektiv fehlt.</li>
+            <li><span class="hir">"Mit freundlichen Grüßen,"</span> — Komma nach der Grußformel ist falsch. Im deutschen Geschäftsbrief kein Satzzeichen nach dieser Formel.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub2">Punkteübersicht</div>
+    <table>
+      <thead>
+        <tr><th>Kriterium</th><th style="width:75px;text-align:center;">Punkte</th><th>Kommentar</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aufgabe erfüllt</td>
+          <td class="score-cell score-g">4 / 5</td>
+          <td>Alle 4 Punkte abgedeckt. 1 Punkt fehlt, weil die Gehaltsangabe vage bleibt und die Frage nach einer Gehaltserhöhung nicht zur Aufgabe gehört. Dieser Zusatz wirkt als nicht-adressierter fünfter Punkt, der Verwirrung stiftet.</td>
+        </tr>
+        <tr>
+          <td>Kommunikative Gestaltung</td>
+          <td class="score-cell score-g">4 / 5</td>
+          <td>Gute Absatzstruktur, Leser orientiert sich leicht. 1 Punkt fehlt, weil der Einstieg in den Dresscode-Absatz abrupt ist. Ein Konnektiv ("Darüber hinaus würde ich gerne fragen...") würde den Übergang fließend machen.</td>
+        </tr>
+        <tr>
+          <td>Formale Richtigkeit</td>
+          <td class="score-cell score-y">4 / 5</td>
+          <td>Grammatik überwiegend korrekt. Das Komma nach "Mit freundlichen Grüßen" ist ein echter Fehler. Konjunktiv II ("beginnen würde") korrekt eingesetzt.</td>
+        </tr>
+        <tr>
+          <td>Wortschatz &amp; Stil</td>
+          <td class="score-cell score-y">4 / 5</td>
+          <td>"wie hoch das Gehalt ist" und "Kleidung" im Einleitungssatz leicht zu direkt. "Kleiderordnung", "Tätigkeit" und "Zusammenarbeit" zeigen guten B1-Wortschatz.</td>
+        </tr>
+        <tr class="total-row">
+          <td><strong>Gesamt</strong></td>
+          <td class="score-cell score-g"><strong>16 / 20</strong></td>
+          <td>Solide Leistung. Alle Aufgaben erfüllt. Vier feine Punkte kosten das volle Ergebnis.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sub2">Diese 4 Punkte fehlen — so holt man sie zurück</div>
+    <div class="rule">
+      <div class="rule-title">Von 16 auf 20: vier konkrete Korrekturen</div>
+      <ul>
+        <li style="margin-bottom:6px;"><strong>Gehaltsfrage präzisieren:</strong> Ersetze <span class="hir">"wie hoch das Gehalt ist"</span> durch <span class="hi3">"welches Grundgehalt und welche Zusatzleistungen für diese Position vorgesehen sind"</span>. Gleiche Information, korrektes Formalregister, stärkerer Wortschatz.</li>
+        <li style="margin-bottom:6px;"><strong>Gehaltserhöhungssatz streichen:</strong> Dieser Satz gehört nicht zur Aufgabe. Er kostet Punkte bei Kommunikative Gestaltung, weil er den Fokus verschiebt. Einfach weglassen.</li>
+        <li style="margin-bottom:6px;"><strong>Konnektiv vor Dresscode-Frage:</strong> Ersetze <span class="hir">"Noch eine Frage zum Thema Kleidung:"</span> durch <span class="hi3">"Darüber hinaus möchte ich fragen, ob es in Ihrem Unternehmen eine Kleiderordnung gibt."</span> Konnektiv + Verb an Position 2 + kein umgangssprachliches "Kleidung".</li>
+        <li><strong>Komma entfernen:</strong> Schreibe <span class="hi3">"Mit freundlichen Grüßen"</span> ohne Komma. Das ist eine Standardregel im deutschen Geschäftsbrief und ein direkter Punkt bei Formale Richtigkeit.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ SAMPLE 2 ═══════════════════════ -->
+
+<div class="card">
+  <div class="card-head b">Sample 2 — Informelle E-Mail (Geburtstagsfeier) &nbsp;|&nbsp; 18 / 20</div>
+  <div class="card-body">
+
+    <div class="scenario-pill b">Szenario</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Deine Freundin Anna hat dich zu ihrer Geburtstagsfeier am Samstag eingeladen. Schreibe zurück: bestätige dein Kommen, frage was du mitbringen sollst, schlage vor, euch vorher auf einen Kaffee zu treffen, und frage ob ihr Freund auch eingeladen ist. Ca. 85 Wörter. Informelles Register (du-Form).</p>
+
+    <div class="sub2">Musterantwort mit Annotationen</div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="dot dot-g"></span> Grün = warum dieser Satz voll punktet</div>
+      <div class="legend-item"><span class="dot dot-r"></span> Rot = die 2 verlorenen Punkte</div>
+    </div>
+
+    <div class="letter-block">
+      Liebe Anna,<br><br>
+      <span class="hi3">vielen Dank für deine Einladung!</span> Ich freue mich riesig —
+      <span class="hi3">natürlich komme ich am Samstag zu deiner Feier.</span><br><br>
+      <span class="hi3">Sag mir bitte, ob ich irgendetwas mitbringen soll</span> — eine Flasche Wein
+      oder vielleicht einen Kuchen?
+      <span class="hi3">Ich würde mich auch sehr freuen, wenn wir uns vorher noch auf einen Kaffee treffen könnten.</span>
+      <span class="hi3">Wie wäre es um 15 Uhr im Café Central?</span><br><br>
+      <span class="hir">Und kommt dein Freund auch?</span>
+      <span class="hir">Das wäre schön</span>, ihn wieder zu sehen.<br><br>
+      <span class="hi3">Bis Samstag und liebe Grüße</span>,<br>
+      Mia
+    </div>
+    <div class="wc-note">Wortanzahl: ca. 87 Wörter. Alle 4 Bulletpoints angesprochen.</div>
+
+    <div class="sub2">Inline-Kommentare</div>
+    <div class="grid2">
+      <div>
+        <div class="rule g">
+          <div class="rule-title">Warum diese Antwort fast perfekt ist</div>
+          <ul>
+            <li><span class="hi3">"natürlich komme ich"</span> — Adverb verstärkt die Zusage ohne Übertreibung. Zeigt natürlichen Sprachfluss.</li>
+            <li><span class="hi3">"Sag mir bitte, ob ich irgendetwas mitbringen soll"</span> — indirekter Fragesatz mit "ob" korrekt gebildet. Typisches B1-Konstrukt.</li>
+            <li><span class="hi3">"Ich würde mich ... freuen, wenn wir ... treffen könnten"</span> — Konjunktiv II zweimal korrekt in einem Satz. Zeigt Beherrschung der höflichen Bitte.</li>
+            <li><span class="hi3">"Wie wäre es um 15 Uhr im Café Central?"</span> — konkreter Vorschlag mit Zeit und Ort. Geht über die Mindestanforderung hinaus und zeigt Schreibkompetenz.</li>
+            <li><span class="hi3">"Bis Samstag und liebe Grüße"</span> — informeller Abschluss korrekt und zum Register passend.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="rule r">
+          <div class="rule-title">Die 2 verlorenen Punkte</div>
+          <ul>
+            <li><span class="hir">"Und kommt dein Freund auch?"</span> — Die Frage steht ohne Einleitung im Raum. Ein kurzes <em>"Übrigens wollte ich noch fragen: Kommt dein Freund auch?"</em> würde einen Konnektiv setzen und die Frage in den Textfluss einbetten.</li>
+            <li><span class="hir">"Das wäre schön"</span> — Füllphrase ohne Informationsgehalt. Sie zeigt keinen aktiven Wortschatz. Besser: <em>"Ich habe ihn schon lange nicht gesehen."</em> Konkrete Aussage, gleiche Länge, voller Punkt bei Wortschatz und Stil.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub2">Punkteübersicht</div>
+    <table>
+      <thead>
+        <tr><th>Kriterium</th><th style="width:75px;text-align:center;">Punkte</th><th>Kommentar</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aufgabe erfüllt</td>
+          <td class="score-cell score-g">5 / 5</td>
+          <td>Alle 4 Bulletpoints vollständig abgedeckt. Der Kaffeevorschlag enthält eine konkrete Uhrzeit und einen Ort. Das geht über die Mindestanforderung hinaus und sichert den vollen Punkt.</td>
+        </tr>
+        <tr>
+          <td>Kommunikative Gestaltung</td>
+          <td class="score-cell score-y">4 / 5</td>
+          <td>Guter Textfluss in den ersten zwei Absätzen. Im dritten Absatz fehlt ein Übergangsausdruck vor der Freundfrage. Die Frage wirkt abgehängt vom Rest des Textes.</td>
+        </tr>
+        <tr>
+          <td>Formale Richtigkeit</td>
+          <td class="score-cell score-g">5 / 5</td>
+          <td>Keine Grammatikfehler. Du-Form konsequent durchgehalten. Indirekter Fragesatz korrekt. Konjunktiv II zweimal korrekt eingesetzt.</td>
+        </tr>
+        <tr>
+          <td>Wortschatz &amp; Stil</td>
+          <td class="score-cell score-y">4 / 5</td>
+          <td>"Das wäre schön" ist eine Platzhalterfloskel. Ein konkreter Ausdruck wie "Ich habe ihn schon ewig nicht gesehen" zeigt aktiven Wortschatz ohne zusätzlichen Satz zu brauchen.</td>
+        </tr>
+        <tr class="total-row b-tint">
+          <td><strong>Gesamt</strong></td>
+          <td class="score-cell score-b"><strong>18 / 20</strong></td>
+          <td>Sehr gutes Ergebnis. Fast prüfungsreif. Zwei kleine Feinheiten trennen diese Antwort von 20/20.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sub2">So werden die 2 Punkte zurückgewonnen</div>
+    <div class="rule b">
+      <div class="rule-title">Von 18 auf 20: zwei gezielte Korrekturen</div>
+      <ul>
+        <li style="margin-bottom:6px;"><strong>Freundfrage einleiten:</strong> Ersetze <span class="hir">"Und kommt dein Freund auch?"</span> durch <span class="hi3">"Übrigens wollte ich noch fragen: Kommt dein Freund auch zur Feier?"</span> Konnektiv "Übrigens" verankert die Frage im Textfluss. Das liefert den fehlenden Punkt bei Kommunikative Gestaltung.</li>
+        <li><strong>Füllphrase ersetzen:</strong> Ersetze <span class="hir">"Das wäre schön"</span> durch <span class="hi3">"Ich habe ihn schon lange nicht gesehen"</span>. Konkrete Information statt Füllwort. Direkter Punkt bei Wortschatz und Stil. Kein zusätzlicher Satz nötig.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ SAMPLE 3 ═══════════════════════ -->
+
+<div class="card">
+  <div class="card-head r">Sample 3 — Forumskommentar (Fremdsprachen lernen) &nbsp;|&nbsp; 14 / 20</div>
+  <div class="card-body">
+
+    <div class="scenario-pill r">Szenario</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Sie lesen einen Forumsbeitrag: "Als Erwachsener eine Fremdsprache zu lernen ist reine Zeitverschwendung." Schreiben Sie einen Kommentar und widersprechen Sie. Mindestens 2 Argumente. Ca. 90 Wörter.</p>
+
+    <div class="sub2">Fehlerhafte Version mit Annotationen</div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="dot dot-r"></span> Rot = bewusst eingebauter Fehler</div>
+      <div class="legend-item" style="font-size:12px;color:var(--muted);">Fehler ¹ = fehlender Konnektiv &nbsp;|&nbsp; Fehler ² = falsches Register &nbsp;|&nbsp; Fehler ³ = Argument ohne Begründung</div>
+    </div>
+
+    <div class="letter-block">
+      Ich bin absolut anderer Meinung als der Autor dieses Beitrags.<br><br>
+      <span class="hi3">Erstens ist es für Erwachsene sehr vorteilhaft, eine neue Sprache zu lernen, weil sie damit bessere Jobchancen bekommen können.</span>
+      <span class="hir">Eine Studie zeigt, dass mehrsprachige Mitarbeiter im Durchschnitt mehr verdienen.<sup>¹</sup></span>
+      <span class="hir">Außerdem, wer Sprachen lernt, trainiert sein Gehirn.<sup>¹</sup></span><br><br>
+      <span class="hir">Ich finde das total spannend und mega wichtig.<sup>²</sup></span>
+      Sprachen verbinden Menschen weltweit.<br><br>
+      <span class="hir">Fremdsprachen sind auch gut für die Gesundheit.<sup>³</sup></span><br><br>
+      Deshalb denke ich, dass Fremdsprachenlernen für Erwachsene keinesfalls Zeitverschwendung ist.
+    </div>
+    <div class="wc-note">Wortanzahl: ca. 86 Wörter. 2 Argumente vorhanden, aber ungleich entwickelt.</div>
+
+    <div class="sub2">Fehlererklärungen</div>
+
+    <div class="rule r">
+      <div class="rule-title">Fehler ¹ — Fehlender Konnektiv und falsche Verb-Stellung</div>
+      <p>Nach dem ersten Argument kommt <span class="hir">"Außerdem, wer Sprachen lernt, trainiert sein Gehirn."</span> Das ist keine korrekte Satzstruktur. "Außerdem" ist ein Adverb und steht an Position 1. Das Verb muss direkt an Position 2 folgen, nicht der Relativsatz. Korrekt: <span class="hi3">"Außerdem trainiert man durch das Sprachenlernen aktiv sein Gehirn."</span> Die fehlerhafte Struktur bricht den Textfluss und kostet einen Punkt bei Formale Richtigkeit und einen halben Punkt bei Kommunikative Gestaltung.</p>
+    </div>
+
+    <div class="rule r" style="margin-top:8px">
+      <div class="rule-title">Fehler ² — Falsches Register (zu informell für ein Forum)</div>
+      <p><span class="hir">"total spannend und mega wichtig"</span> — "total" und "mega" als Intensivierer gehören in Chats und gesprochene Sprache unter Jugendlichen, nicht in einen schriftlichen Forumsbeitrag zu einem sachlichen Thema. Ein Forum ist kein Chatverlauf. B1 verlangt hier neutralen Stil. Korrekt: <span class="hi3">"Ich halte das für äußerst sinnvoll und bedeutsam."</span> Gleiches Konzept, korrektes Register.</p>
+    </div>
+
+    <div class="rule r" style="margin-top:8px">
+      <div class="rule-title">Fehler ³ — Argument ohne Begründung (nackte Behauptung)</div>
+      <p><span class="hir">"Fremdsprachen sind auch gut für die Gesundheit."</span> ist eine leere Behauptung. Die Prüfung verlangt, dass jedes Argument mit einem Grund belegt wird. Ohne Begründung zählt der Satz nicht als vollständiges Argument und kostet einen Punkt bei Aufgabe erfüllt. Korrekt: <span class="hi3">"Fremdsprachen sind auch gut für die Gesundheit, denn mehrsprachige Menschen erkranken laut Forschung später an Demenz."</span> Behauptung plus Begründung mit "denn" = vollständiges Argument.</p>
+    </div>
+
+    <div class="sub2">Punkteübersicht</div>
+    <table>
+      <thead>
+        <tr><th>Kriterium</th><th style="width:75px;text-align:center;">Punkte</th><th>Kommentar</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aufgabe erfüllt</td>
+          <td class="score-cell score-y">3 / 5</td>
+          <td>2 Argumente vorhanden, aber Argument 3 ist eine nackte Behauptung ohne Begründung. Das zählt nicht als vollständig entwickeltes Argument. Die Aufgabe fordert mindestens 2 begründete Argumente. Nur 1 ist hier wirklich begründet.</td>
+        </tr>
+        <tr>
+          <td>Kommunikative Gestaltung</td>
+          <td class="score-cell score-y">3 / 5</td>
+          <td>Struktur vorhanden (Erstens, Zweitens impliziert, Deshalb). Aber Satz ¹ bricht den Fluss durch falsche Verb-Stellung, und Satz ² ("total spannend") trägt keine inhaltliche Information. Der Schlussabsatz ist die stärkste Stelle.</td>
+        </tr>
+        <tr>
+          <td>Formale Richtigkeit</td>
+          <td class="score-cell score-y">4 / 5</td>
+          <td>Ein klarer Grammatikfehler: "Außerdem, wer Sprachen lernt, trainiert sein Gehirn" — falsche Verb-Stellung nach Adverb. Rest ist grammatisch korrekt.</td>
+        </tr>
+        <tr>
+          <td>Wortschatz &amp; Stil</td>
+          <td class="score-cell score-y">4 / 5</td>
+          <td>"total" und "mega" sind falsches Register. "Zeitverschwendung", "keinesfalls" und "Jobchancen" im Resttext sind gute B1-Wörter. 1 Punkt Abzug wegen Registerfehler.</td>
+        </tr>
+        <tr class="total-row r-tint">
+          <td><strong>Gesamt</strong></td>
+          <td class="score-cell score-r"><strong>14 / 20</strong></td>
+          <td>Typisches Mittelfeldresultat. Die 3 Fehler sind nicht gravierend einzeln, aber zusammen ergeben sie 6 Punkte Verlust.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sub2">Korrigierte Version (alle 3 Fehler behoben)</div>
+
+    <div class="rule g" style="margin-bottom:8px;">
+      <div class="rule-title">Korrigierter Text — Grün = Korrekturen</div>
+    </div>
+
+    <div class="letter-block">
+      Ich bin absolut anderer Meinung als der Autor dieses Beitrags.<br><br>
+      <span class="hi3">Erstens ist es für Erwachsene sehr vorteilhaft, eine neue Sprache zu lernen, weil sie damit bessere Jobchancen bekommen können.</span>
+      Eine Studie der Universität Leipzig zeigt, dass mehrsprachige Mitarbeiter im Durchschnitt mehr verdienen.
+      <span class="hi3">Außerdem trainiert man durch das Sprachenlernen aktiv sein Gehirn, was die Konzentration im Alltag verbessert.</span><br><br>
+      <span class="hi3">Ich halte das für äußerst sinnvoll und bedeutsam.</span>
+      Sprachen verbinden Menschen weltweit.<br><br>
+      <span class="hi3">Fremdsprachen sind auch gut für die Gesundheit, denn mehrsprachige Menschen erkranken laut aktueller Forschung später an Demenz.</span><br><br>
+      Deshalb denke ich, dass Fremdsprachenlernen für Erwachsene keinesfalls Zeitverschwendung ist.
+    </div>
+    <div class="wc-note">Korrigierte Version: ca. 91 Wörter. 3 vollständig begründete Argumente. Register neutral und passend. Verb-Stellung korrekt.</div>
+
+    <div class="sub2">Was die korrigierte Version besser macht</div>
+    <div class="rule g">
+      <div class="rule-title">3 Korrekturen — 6 Punkte zurückgeholt</div>
+      <ul>
+        <li style="margin-bottom:6px;"><span class="hi3">Fehler ¹ behoben:</span> "Außerdem trainiert man durch das Sprachenlernen aktiv sein Gehirn" — Adverb an Position 1, Verb an Position 2, Subjekt "man". Korrekte Wortstellung, flüssiger Übergang.</li>
+        <li style="margin-bottom:6px;"><span class="hi3">Fehler ² behoben:</span> "Ich halte das für äußerst sinnvoll und bedeutsam" statt "total spannend und mega wichtig". Gleiches Konzept, korrektes schriftliches Register. Direkter Punkt bei Wortschatz und Stil.</li>
+        <li><span class="hi3">Fehler ³ behoben:</span> "...denn mehrsprachige Menschen erkranken laut aktueller Forschung später an Demenz." Begründung direkt mit "denn" angefügt. Das Argument ist jetzt vollständig und belegt. Punkt bei Aufgabe erfüllt gesichert.</li>
+      </ul>
+    </div>
+
+    <div class="rule" style="margin-top:10px;">
+      <div class="rule-title">Erwartete Punktzahl der korrigierten Version</div>
+      <p>Aufgabe erfüllt: 5/5 &nbsp; Kommunikative Gestaltung: 5/5 &nbsp; Formale Richtigkeit: 5/5 &nbsp; Wortschatz &amp; Stil: 4/5</p>
+      <p style="margin-top:5px;color:var(--accent3);font-weight:600;">Gesamt: 19/20 — 1 Punkt bleibt wegen "Sprachen verbinden Menschen weltweit" als etwas schwachem Übergangssatz ohne Bezug zum vorigen Argument.</p>
+    </div>
+
+  </div>
+</div>
+
 <div class="sub">Leseverstehen — Exam Strategies</div>
 <div class="grid3">
   <div class="card"><div class="card-head y">Teil 1 — Match text to headline</div><div class="card-body">
@@ -4799,6 +5504,271 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 
 <!-- END LESEVERSTEHEN EXTRA PRACTICE -->
 
+
+
+<div class="sub">Leseverstehen — Extra Practice Set 2</div>
+
+<!-- ══════════════════════ LESEN TEIL 1 ══════════════════════ -->
+<div class="fill-card" style="margin-bottom:14px">
+  <div class="card-head b">Übung: Lesen Teil 1 — Schlagzeilen zuordnen (a–j)</div>
+  <div style="padding:10px 14px">
+    <div class="rule b"><div class="rule-title">Aufgabe: Lesen Sie die Texte 1–5 und die Schlagzeilen a–j. Welche Schlagzeile passt zu welchem Text? Fünf Schlagzeilen passen zu keinem Text.</div></div>
+
+    <div class="sub2" style="margin:14px 0 8px">Schlagzeilen a–j</div>
+    <div class="grid2">
+      <div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">a</div>
+          <div class="card-body" style="font-size:13px">Neue App macht Sprachenlernen einfacher</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">b</div>
+          <div class="card-body" style="font-size:13px">Weniger Müll durch besseres Recycling</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">c</div>
+          <div class="card-body" style="font-size:13px">Frische Lebensmittel aus der Nachbarschaft</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">d</div>
+          <div class="card-body" style="font-size:13px">Kochen lernen leicht gemacht</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">e</div>
+          <div class="card-body" style="font-size:13px">Stadt baut Fahrradnetz weiter aus</div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">f</div>
+          <div class="card-body" style="font-size:13px">Neues Leihfahrrad-System für die Stadt</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">g</div>
+          <div class="card-body" style="font-size:13px">Gemeinsam Gemüse anbauen</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">h</div>
+          <div class="card-body" style="font-size:13px">Verpackungen: Was wirklich in die Tonne darf</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">i</div>
+          <div class="card-body" style="font-size:13px">Sprachen lernen unterwegs: Ein Test</div>
+        </div>
+        <div class="card" style="margin-bottom:7px">
+          <div class="card-head y">j</div>
+          <div class="card-body" style="font-size:13px">Kochkurs für Anfänger — wir haben ihn ausprobiert</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub2" style="margin:16px 0 8px">Texte 1–5</div>
+
+    <div class="card" style="margin-bottom:8px">
+      <div class="card-head b">Text 1</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        Die Stadt München hat ein neues System eingeführt: An 120 Stationen im Stadtgebiet können Bürger jetzt Fahrräder ausleihen und an einer anderen Station zurückgeben. Die Registrierung funktioniert per Smartphone-App. Die ersten 30 Minuten sind kostenlos.
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:8px">
+      <div class="card-head b">Text 2</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        Auf einer Brachfläche im Stadtteil Neuhausen haben Anwohner einen Gemeinschaftsgarten angelegt. Dort wachsen Tomaten, Salat und Kräuter. Jeder kann mitmachen — egal ob jung oder alt. Die Ernte teilen sich alle Mitglieder.
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:8px">
+      <div class="card-head b">Text 3</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        Die Volkshochschule Köln bietet ab September einen Kochkurs speziell für Menschen an, die noch nie kochen gelernt haben. In acht Einheiten lernen die Teilnehmer einfache Gerichte zuzubereiten. Die Kursgebühr beträgt 95 Euro. Anmeldungen sind online möglich.
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:8px">
+      <div class="card-head b">Text 4</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        Immer mehr Deutsche trennen ihren Müll nicht richtig. Eine neue Kampagne des Umweltministeriums erklärt jetzt genau, welche Materialien in den gelben Sack, welche ins Altpapier und welche in den Restmüll gehören. Falsch sortierter Müll kostet Kommunen jedes Jahr Millionen Euro.
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:8px">
+      <div class="card-head b">Text 5</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        Die App „LinguaGo" verspricht, Vokabeln und Grammatik spielerisch zu vermitteln. Nutzer können täglich Lerneinheiten absolvieren — auch in der Straßenbahn oder in der Mittagspause. Ein Test zeigt: Die Methode funktioniert am besten für Anfänger. Fortgeschrittene brauchen mehr Tiefe.
+      </div>
+    </div>
+
+    <!-- ANSWER KEY TEIL 1 -->
+    <div class="sub2" style="margin:18px 0 8px">Lösungsschlüssel — Lesen Teil 1</div>
+    <div class="fill-card" style="margin-bottom:0">
+      <div class="card-head r">Antworten &amp; Erklärungen</div>
+      <div style="padding:11px 13px">
+        <div class="pair">
+          <span class="pair-de">1</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">f: Neues Leihfahrrad-System für die Stadt</span> —
+            Der Text beschreibt Ausleihstationen und eine App zum Registrieren, kein neues Radwegenetz.
+            <span class="hir">✗ e</span> passt nicht, weil Text 1 kein Ausbauprogramm beschreibt, sondern einen Verleihservice.
+          </span>
+        </div>
+        <div class="pair">
+          <span class="pair-de">2</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">g: Gemeinsam Gemüse anbauen</span> —
+            Anwohner bauen zusammen Obst und Gemüse auf einer Gemeinschaftsfläche an.
+            <span class="hir">✗ c</span> passt nicht, weil Text 2 keinen Lebensmittelverkauf in der Nachbarschaft beschreibt, sondern kollektiven Anbau.
+          </span>
+        </div>
+        <div class="pair">
+          <span class="pair-de">3</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">d: Kochen lernen leicht gemacht</span> —
+            Text 3 beschreibt einen VHS-Kochkurs für absolute Anfänger ohne Vorkenntnisse.
+            <span class="hir">✗ j</span> passt nicht, weil Schlagzeile j einen persönlichen Erfahrungsbericht impliziert, Text 3 aber eine sachliche Kursankündigung ist.
+          </span>
+        </div>
+        <div class="pair">
+          <span class="pair-de">4</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">b: Weniger Müll durch besseres Recycling</span> —
+            Die Kampagne erklärt richtige Mülltrennung, um Kosten und Abfall zu reduzieren.
+            <span class="hir">✗ h</span> passt nicht, weil Text 4 allgemeine Mülltrennung beschreibt, nicht speziell Verpackungen.
+          </span>
+        </div>
+        <div class="pair" style="border-bottom:none">
+          <span class="pair-de">5</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">i: Sprachen lernen unterwegs: Ein Test</span> —
+            Text 5 berichtet über einen App-Test mit konkretem Ergebnis für verschiedene Niveaustufen.
+            <span class="hir">✗ a</span> passt nicht, weil Schlagzeile a eine uneingeschränkt positive Aussage macht, Text 5 aber Grenzen der App für Fortgeschrittene nennt.
+          </span>
+        </div>
+        <div class="rule b" style="margin-top:10px"><div class="rule-title">Nicht verwendete Schlagzeilen (Fallen): a, c, e, h, j — alle klingen thematisch ähnlich, beschreiben aber etwas Spezifischeres oder Anderes als die zugehörigen Texte.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════ LESEN TEIL 2 ══════════════════════ -->
+<div class="fill-card" style="margin-bottom:14px">
+  <div class="card-head g">Übung: Lesen Teil 2 — Zeitungsartikel &amp; Multiple Choice (Fragen 6–10)</div>
+  <div style="padding:10px 14px">
+    <div class="rule g"><div class="rule-title">Aufgabe: Lesen Sie den Artikel und wählen Sie für jede Frage (6–10) die richtige Antwort: a, b oder c.</div></div>
+
+    <div class="sub2" style="margin:14px 0 8px">Artikel</div>
+    <div class="fill-text" style="background:var(--surface2);padding:14px;border-radius:8px;font-size:13px;line-height:1.9;color:var(--text);margin-bottom:14px;font-family:'IBM Plex Sans',sans-serif">
+      <strong>Freiburg im Breisgau: Wie eine Stadt nachhaltiger wurde</strong><br><br>
+      Freiburg im Breisgau liegt im Südwesten Deutschlands und hat rund 230.000 Einwohner. Die Stadt ist weit über die deutschen Grenzen hinaus bekannt, weil sie seit den 1970er Jahren konsequent auf Umweltschutz setzt. Stadtplaner aus Europa, Asien und Amerika kommen regelmäßig nach Freiburg, um das Modell zu studieren.<br><br>
+      Ein zentrales Element ist das Fahrradnetz. Über 500 Kilometer Radwege durchziehen das Stadtgebiet. Mehr als 30 Prozent aller täglichen Wege legen die Freiburger mit dem Fahrrad zurück. Zum Vergleich: In deutschen Großstädten wie Frankfurt oder Hamburg liegt dieser Anteil bei etwa zehn Prozent. Die Stadt plant, das Netz bis 2028 weiter auszubauen.<br><br>
+      Solarenergie ist ein weiterer Schwerpunkt. Die Region Freiburg hat mit durchschnittlich 1.800 Sonnenstunden pro Jahr besonders viel Sonnenlicht. Im Stadtteil Vauban, der in den 1990er Jahren gebaut wurde, erzeugen viele Häuser mehr Strom als ihre Bewohner verbrauchen. Die überschüssige Energie wird ins öffentliche Netz eingespeist. Das Vauban-Modell gilt heute weltweit als Beispiel für klimaneutrales Bauen.<br><br>
+      Auch begrünte Dächer prägen das Stadtbild. Auf mehr als 800 städtischen Gebäuden wachsen Pflanzen und Gräser. Diese Gründächer kühlen im Sommer, speichern Regenwasser und bieten Insekten Lebensraum. Private Eigentümer erhalten von der Stadt finanzielle Unterstützung, wenn sie ihr Dach begrünen lassen.<br><br>
+      Trotz dieser Erfolge hat Freiburg Probleme. Die Mieten steigen seit Jahren stark, weil die Stadt so beliebt ist. Viele junge Familien können sich eine Wohnung in der Innenstadt nicht mehr leisten. Außerdem kämpft die Stadt mit zu vielen Touristen, die die grüne Infrastruktur belasten. Die Stadtverwaltung sucht nach Wegen, ökologischen Erfolg und soziale Gerechtigkeit gleichzeitig zu erreichen.
+    </div>
+
+    <div class="sub2" style="margin:0 0 10px">Fragen 6–10</div>
+
+    <div class="card" style="margin-bottom:9px">
+      <div class="card-head b">Frage 6 — Wie viel Prozent der täglichen Wege legen Freiburger mit dem Fahrrad zurück?</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        <div class="pair"><span class="pair-de">a</span><span class="pair-en" style="text-align:left;color:var(--text)">Etwa zehn Prozent</span></div>
+        <div class="pair"><span class="pair-de">b</span><span class="pair-en" style="text-align:left;color:var(--text)">Mehr als 30 Prozent</span></div>
+        <div class="pair" style="border-bottom:none"><span class="pair-de">c</span><span class="pair-en" style="text-align:left;color:var(--text)">Genau 50 Prozent</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:9px">
+      <div class="card-head b">Frage 7 — Was ist besonders am Stadtteil Vauban?</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        <div class="pair"><span class="pair-de">a</span><span class="pair-en" style="text-align:left;color:var(--text)">Er ist der älteste Stadtteil von Freiburg.</span></div>
+        <div class="pair"><span class="pair-de">b</span><span class="pair-en" style="text-align:left;color:var(--text)">Viele Häuser dort produzieren mehr Strom, als ihre Bewohner verbrauchen.</span></div>
+        <div class="pair" style="border-bottom:none"><span class="pair-de">c</span><span class="pair-en" style="text-align:left;color:var(--text)">Dort gibt es das größte Fahrradnetz der Stadt.</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:9px">
+      <div class="card-head b">Frage 8 — Was bedeutet „überschüssig" im Text (Absatz 3)?</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        <div class="pair"><span class="pair-de">a</span><span class="pair-en" style="text-align:left;color:var(--text)">zu teuer</span></div>
+        <div class="pair"><span class="pair-de">b</span><span class="pair-en" style="text-align:left;color:var(--text)">mehr als benötigt</span></div>
+        <div class="pair" style="border-bottom:none"><span class="pair-de">c</span><span class="pair-en" style="text-align:left;color:var(--text)">aus dem Ausland importiert</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:9px">
+      <div class="card-head b">Frage 9 — Welche Aussage über die Gründächer stimmt laut Artikel NICHT?</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        <div class="pair"><span class="pair-de">a</span><span class="pair-en" style="text-align:left;color:var(--text)">Sie kühlen Gebäude im Sommer.</span></div>
+        <div class="pair"><span class="pair-de">b</span><span class="pair-en" style="text-align:left;color:var(--text)">Die Stadt fördert private Eigentümer finanziell.</span></div>
+        <div class="pair" style="border-bottom:none"><span class="pair-de">c</span><span class="pair-en" style="text-align:left;color:var(--text)">Sie erzeugen Solarstrom für das Stromnetz.</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:9px">
+      <div class="card-head b">Frage 10 — Was ist ein aktuelles Problem in Freiburg?</div>
+      <div class="card-body" style="font-size:13px;line-height:1.8">
+        <div class="pair"><span class="pair-de">a</span><span class="pair-en" style="text-align:left;color:var(--text)">Das Fahrradnetz wird wegen fehlender Mittel abgebaut.</span></div>
+        <div class="pair"><span class="pair-de">b</span><span class="pair-en" style="text-align:left;color:var(--text)">Die steigenden Mieten machen Wohnraum für viele Menschen unerschwinglich.</span></div>
+        <div class="pair" style="border-bottom:none"><span class="pair-de">c</span><span class="pair-en" style="text-align:left;color:var(--text)">Die Solaranlagen produzieren nicht genug Strom für die Stadt.</span></div>
+      </div>
+    </div>
+
+    <!-- ANSWER KEY TEIL 2 -->
+    <div class="sub2" style="margin:18px 0 8px">Lösungsschlüssel — Lesen Teil 2</div>
+    <div class="fill-card" style="margin-bottom:0">
+      <div class="card-head r">Antworten &amp; Erklärungen</div>
+      <div style="padding:11px 13px">
+        <div class="pair">
+          <span class="pair-de">6</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">b: Mehr als 30 Prozent</span> —
+            Absatz 2 nennt „mehr als 30 Prozent aller täglichen Wege" wörtlich.
+            <span class="hir">✗ a</span> ist der Vergleichswert für Frankfurt und Hamburg, nicht für Freiburg;
+            <span class="hir">✗ c</span> ist eine erfundene Zahl, die im Text nicht vorkommt.
+          </span>
+        </div>
+        <div class="pair">
+          <span class="pair-de">7</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">b: Viele Häuser produzieren mehr Strom als ihre Bewohner verbrauchen.</span> —
+            Absatz 3 erklärt das genau so.
+            <span class="hir">✗ a</span> ist falsch: Vauban wurde in den 1990ern neu gebaut, ist also jung;
+            <span class="hir">✗ c</span> wird im Text nicht erwähnt.
+          </span>
+        </div>
+        <div class="pair">
+          <span class="pair-de">8</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">b: mehr als benötigt</span> —
+            Der Kontext zeigt: die Häuser erzeugen mehr Strom als sie brauchen, der Rest geht ins Netz.
+            <span class="hir">✗ a</span> und <span class="hir">✗ c</span> passen nicht zum Kontext Energie.
+          </span>
+        </div>
+        <div class="pair">
+          <span class="pair-de">9</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">c: Sie erzeugen Solarstrom für das Stromnetz.</span> —
+            Absatz 4 nennt für Gründächer nur Kühlung, Regenwasserspeicherung und Insektenlebensraum. Solarstrom kommt im Text nur im Zusammenhang mit Vauban vor, nicht mit Gründächern.
+            <span class="hir">✗ a und b</span> sind beide korrekte Informationen direkt aus Absatz 4.
+          </span>
+        </div>
+        <div class="pair" style="border-bottom:none">
+          <span class="pair-de">10</span>
+          <span class="pair-en" style="text-align:left">
+            <span class="hi3">b: Die steigenden Mieten machen Wohnraum unerschwinglich.</span> —
+            Absatz 5 nennt steigende Mieten und die Schwierigkeit für junge Familien als konkretes Problem.
+            <span class="hir">✗ a</span> widerspricht dem Text: das Netz wird ausgebaut, nicht abgebaut;
+            <span class="hir">✗ c</span> wird im Artikel nicht erwähnt.
+          </span>
+        </div>
+        <div class="rule r" style="margin-top:10px"><div class="rule-title">Prüfungstipp NICHT-Fragen: Prüfen Sie jede Option einzeln gegen den Text. Zwei Optionen sind im Artikel bestätigt. Nur eine Option widerspricht dem Text oder bringt neue Information, die dort nicht steht.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div class="sub">Hörverstehen — Practice Transcripts with Richtig/Falsch</div>
 <div class="rule b"><div class="rule-title">These mirror TELC Hörverstehen format. Read the statement BEFORE listening. The audio uses synonyms — not the same words as the statement. Distractors contain words from the audio used in wrong context.</div></div>
 
@@ -5128,6 +6098,174 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
     <div class="ex"><div class="ex-de">③ Auf den Partner reagieren.</div><div class="ex-en">"Wie Sie sagten, …" shows active listening and earns marks.</div></div>
     <div class="ex"><div class="ex-de">④ Ruhig bleiben bei unbekannten Themen.</div><div class="ex-en">No facts needed. Speak about Vor- und Nachteile or Auswirkungen auf den Alltag.</div></div>
     <div class="ex"><div class="ex-de">⑤ Diskussion selbst beenden.</div><div class="ex-en">"Einigen wir uns dann darauf, dass …" — shows confidence.</div></div>
+  </div>
+</div>
+
+
+<div class="sub">Mündlicher Ausdruck — Modell-Gespräche (Model Transcripts)</div>
+
+<div class="oral-card">
+  <div class="oc-head b">Transcript A — Teil 2: Diskussion (~5 Min.)</div>
+  <div class="oc-body">
+    <div class="oc-scenario">
+      Thema: „Sollte man soziale Medien für Kinder unter 13 Jahren verbieten?" Kandidat A und Kandidat B diskutieren das Thema und suchen einen Kompromiss.
+    </div>
+
+    <div class="sub2">Gesprächsverlauf</div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (1):</strong> Ich bin der Meinung, dass soziale Medien für Kinder unter 13 Jahren verboten werden sollten, <span class="hi">weil</span> Kinder in diesem Alter noch nicht in der Lage sind, Inhalte kritisch zu beurteilen. <span class="hi">Denn</span> das Gehirn ist in dieser Phase besonders anfällig für Manipulation und soziale Vergleiche mit anderen.</div>
+      <div class="ex-en"><span class="hi2">Position einführen mit weil / denn</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (2):</strong> Da stimme ich dir teilweise zu — der Schutz von Kindern ist wirklich wichtig. <span class="hi">Außerdem</span> gibt es Studien, die zeigen, dass übermäßige Nutzung sozialer Medien bei Kindern zu Schlafproblemen und Angstzuständen führen kann.</div>
+      <div class="ex-en"><span class="hi2">Teilweise zustimmen + eigenen Aspekt hinzufügen (Außerdem)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (3):</strong> Genau. <span class="hi">Hinzu kommt</span>, dass Kinder auf Plattformen wie Instagram oder TikTok schnell mit unangemessenen Inhalten in Kontakt kommen können. Eltern können das nicht immer kontrollieren, selbst wenn sie es versuchen.</div>
+      <div class="ex-en"><span class="hi2">Argument erweitern (Hinzu kommt)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (4):</strong> <span class="hi">Das sehe ich etwas anders, weil</span> ein vollständiges Verbot kaum durchsetzbar ist. Kinder können einfach das Geburtsdatum fälschen oder das Gerät eines Erwachsenen benutzen. Ein Verbot ohne Bildung löst das eigentliche Problem nicht.</div>
+      <div class="ex-en"><span class="hi2">Höflich widersprechen (Das sehe ich etwas anders, weil)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (5):</strong> <span class="hi">Aber</span> ein gesetzliches Verbot schafft zumindest eine klare Grenze und gibt Eltern eine rechtliche Grundlage. Ohne ein solches Signal tun viele Plattformen einfach gar nichts.</div>
+      <div class="ex-en"><span class="hi2">Gegenargument mit aber</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (6):</strong> <span class="hi">Trotzdem</span> sollte man nicht vergessen, dass soziale Medien auch positive Seiten haben — Kinder können kreativ sein, Freundschaften pflegen und sich informieren. Ein totales Verbot nimmt ihnen diese Möglichkeiten.</div>
+      <div class="ex-en"><span class="hi2">Einschränkung mit trotzdem</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (7):</strong> Das stimmt. <span class="hi">Andererseits</span> können diese positiven Effekte auch durch andere Medien wie Bücher, Lernplattformen oder Videoanrufe erreicht werden, ohne die Risiken von Instagram oder TikTok.</div>
+      <div class="ex-en"><span class="hi2">Alternative Perspektive (Andererseits)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (8):</strong> <span class="hi">Aber</span> die Realität ist, dass diese Plattformen zur sozialen Welt der Kinder gehören. Wenn ein Kind ausgeschlossen wird, kann das Einsamkeit und sozialen Druck erzeugen, was ebenfalls schädlich ist.</div>
+      <div class="ex-en"><span class="hi2">Konterargument mit aber</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (9):</strong> Vielleicht liegt die Lösung in der Mitte. Man könnte strenge Altersverifizierung einführen und gleichzeitig in der Schule Medienkompetenz unterrichten. So schützt man Kinder, ohne sie vollständig auszuschließen.</div>
+      <div class="ex-en"><span class="hi2">Kompromiss anbahnen</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (10):</strong> Das klingt vernünftig. Eine verpflichtende digitale Bildung ab der Grundschule wäre sicher sinnvoll. Und Plattformen könnten gezwungen werden, bessere Kinderschutz-Funktionen einzubauen.</div>
+      <div class="ex-en"><span class="hi2">Kompromissvorschlag aufgreifen und ergänzen</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (11):</strong> Ja, und der Staat könnte Plattformen bei Verstößen mit hohen Bußgeldern bestrafen. Das würde echten Druck erzeugen, die Regeln auch tatsächlich umzusetzen.</div>
+      <div class="ex-en"><span class="hi2">Abschluss vorbereiten</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (12):</strong> <span class="hi">Einigen wir uns darauf</span>: Ein pauschales Verbot ist nicht die beste Lösung, aber stärkere Regulierung, digitale Bildung und technische Schutzmaßnahmen zusammen können Kinder wirkungsvoll schützen.</div>
+      <div class="ex-en"><span class="hi2">Abschluss (Einigen wir uns darauf)</span></div>
+    </div>
+
+    <div class="oc-phrases">
+      <span class="oc-phrase">weil / denn</span>
+      <span class="oc-phrase">Außerdem</span>
+      <span class="oc-phrase">Hinzu kommt</span>
+      <span class="oc-phrase">Das sehe ich etwas anders, weil</span>
+      <span class="oc-phrase">Aber</span>
+      <span class="oc-phrase">Trotzdem</span>
+      <span class="oc-phrase">Andererseits</span>
+      <span class="oc-phrase">Einigen wir uns darauf</span>
+    </div>
+  </div>
+</div>
+
+<!-- Transcript B: Teil 3 — Planning Together -->
+<div class="oral-card">
+  <div class="oc-head g">Transcript B — Teil 3: Gemeinsam planen (~5 Min.)</div>
+  <div class="oc-body">
+    <div class="oc-scenario">
+      Aufgabe: Planen Sie eine Abschiedsparty für Ihre Kollegin Frau Müller, die die Firma nach 12 Jahren verlässt. Budget: ca. 200 Euro. Teilnehmer: 15 Kollegen.
+    </div>
+
+    <div class="sub2">Gesprächsverlauf</div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (1):</strong> Also, wir sollten eine Abschiedsparty für Frau Müller organisieren. <span class="hi">Ich schlage vor</span>, dass wir das am Freitagabend nach der Arbeit machen. Dann können alle Kollegen kommen.</div>
+      <div class="ex-en"><span class="hi2">Vorschlag machen (Ich schlage vor)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (2):</strong> Freitag klingt gut. <span class="hi">Wäre es nicht besser</span>, wenn wir das Café um die Ecke buchen? Da ist die Atmosphäre persönlicher und wir müssen danach nicht aufräumen.</div>
+      <div class="ex-en"><span class="hi2">Gegenvorschlag machen (Wäre es nicht besser)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (3):</strong> Das ist eine gute Idee. Das Café hat auch genug Platz für alle 15 Personen. <span class="hi">Einverstanden</span>, lass uns das Café nehmen.</div>
+      <div class="ex-en"><span class="hi2">Zustimmen (Einverstanden)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (4):</strong> <span class="hi">Weißt du, ob</span> das Café auch Catering anbietet? Ich frage mich, ob ein Buffet oder einfach Fingerfood besser wäre. Was denkst du?</div>
+      <div class="ex-en"><span class="hi2">Nach Details fragen (Essen/Ort)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (5):</strong> Ich glaube, das Café macht ein kleines Buffet für Gruppen. Fingerfood wäre praktisch, weil die Leute dann stehen und reden können. <span class="hi">Sollen wir</span> auch einen Kuchen bestellen?</div>
+      <div class="ex-en"><span class="hi2">Detail klären + Rückfrage</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (6):</strong> Ja, ein Kuchen ist Pflicht! Frau Müller mag Schokolade, das weiß ich. <span class="hi">Haben wir eigentlich</span> eine Budgetobergrenze vom Chef bekommen?</div>
+      <div class="ex-en"><span class="hi2">Zustimmen + nach Budget fragen</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (7):</strong> Der Chef hat 200 Euro aus der Teamkasse freigegeben. Das reicht gut für Essen und Getränke. Ein Geschenk müssen wir separat sammeln, ich würde sagen 10 Euro pro Person.</div>
+      <div class="ex-en"><span class="hi2">Budget bestätigen + Vorschlag</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (8):</strong> 10 Euro pro Person ist fair. <span class="hi">Was hältst du davon</span>, ihr einen Reisegutschein zu schenken? Sie reist sehr gerne, das wäre etwas Persönliches.</div>
+      <div class="ex-en"><span class="hi2">Geschenkvorschlag (Was hältst du davon)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (9):</strong> Ein Reisegutschein ist eine tolle Idee. Jetzt müssen wir die Aufgaben verteilen. <span class="hi">Kannst du</span> das Café anrufen und einen Tisch für Freitag um 18 Uhr reservieren?</div>
+      <div class="ex-en"><span class="hi2">Aufgaben verteilen</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (10):</strong> Klar, ich rufe heute noch an. <span class="hi">Könntest du</span> das Geld für das Geschenk bei den Kollegen einsammeln? Ich würde außerdem die Einladungs-E-Mail schreiben.</div>
+      <div class="ex-en"><span class="hi2">Aufgabe annehmen + weitere Aufgaben zuweisen (Könntest du)</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>A (11):</strong> Perfekt, ich kümmere mich ums Geld und bestelle den Kuchen. Schreib in der E-Mail, dass alle bis Mittwoch antworten sollen, damit wir die genaue Personenzahl wissen.</div>
+      <div class="ex-en"><span class="hi2">Aufgaben bestätigen + logistisches Detail</span></div>
+    </div>
+
+    <div class="ex b">
+      <div class="ex-de"><strong>B (12):</strong> Alles klar! Café gebucht, Fingerfood und Kuchen bestellt, Geschenk und Einladung organisiert. <span class="hi">Ich glaube, wir haben alles</span> geplant. Frau Müller wird sich sicher sehr freuen!</div>
+      <div class="ex-en"><span class="hi2">Abschluss: Plan zusammenfassen</span></div>
+    </div>
+
+    <div class="oc-phrases">
+      <span class="oc-phrase">Ich schlage vor</span>
+      <span class="oc-phrase">Wäre es nicht besser</span>
+      <span class="oc-phrase">Einverstanden</span>
+      <span class="oc-phrase">Weißt du, ob</span>
+      <span class="oc-phrase">Was hältst du davon</span>
+      <span class="oc-phrase">Könntest du</span>
+      <span class="oc-phrase">Ich kümmere mich um</span>
+      <span class="oc-phrase">Ich glaube, wir haben alles geplant</span>
+    </div>
   </div>
 </div>
 
