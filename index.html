@@ -236,15 +236,30 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
     </div>
   </div>
 
-  <!-- GROUP 4: Exam Skills -->
+  <!-- GROUP 4: Writing & Speaking -->
   <div class="nav-group">
-    <button class="nav-group-btn" id="grp-exam">🎯 Exam <span class="arrow">▾</span></button>
+    <button class="nav-group-btn" id="grp-output">✍️ Writing &amp; Speaking <span class="arrow">▾</span></button>
     <div class="nav-dropdown">
       <button class="nav-dd-btn" onclick="show('writing')">✍️ Writing</button>
-      <button class="nav-dd-btn" onclick="show('listening')">👂 Listening</button>
-      <button class="nav-dd-btn" onclick="show('phrases')">💬 Phrases</button>
       <button class="nav-dd-btn" onclick="show('sprechen')">🗣 Sprechen</button>
-      <button class="nav-dd-btn" onclick="show('exam')">🎯 Exam Simulation</button>
+      <button class="nav-dd-btn" onclick="show('phrases')">💬 Phrases</button>
+      <button class="nav-dd-btn" onclick="show('listening')">👂 Listening</button>
+    </div>
+  </div>
+
+  <!-- GROUP 5: Practice -->
+  <div class="nav-group">
+    <button class="nav-group-btn" id="grp-practice">📝 Practice <span class="arrow">▾</span></button>
+    <div class="nav-dropdown">
+      <button class="nav-dd-btn" onclick="show('practice')">📝 All Practice Exercises</button>
+    </div>
+  </div>
+
+  <!-- GROUP 6: Exam Strategy -->
+  <div class="nav-group">
+    <button class="nav-group-btn" id="grp-exam">🎯 Exam Strategy <span class="arrow">▾</span></button>
+    <div class="nav-dropdown">
+      <button class="nav-dd-btn" onclick="show('exam')">🎯 Strategy &amp; Study Plan</button>
     </div>
   </div>
 
@@ -881,7 +896,8 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
     <p>✗ Ich war krank gegangen. &nbsp;·&nbsp; ✓ Ich bin krank geworden. / Ich war krank. (no other verb → ok)</p></div>
     <div class="rule" style="margin-top:6px"><div class="rule-title">Separable verb Partizip II: ge- goes BETWEEN prefix and stem</div>
     <p>auf·<span class="hi">ge</span>·standen · an·<span class="hi">ge</span>·rufen · ein·<span class="hi">ge</span>·kauft · statt·<span class="hi">ge</span>·funden</p>
-    <table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:0.92em">
+    <table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:0.92em;table-layout:fixed">
+      <colgroup><col style="width:22%"><col style="width:38%"><col style="width:28%"><col style="width:12%"></colgroup>
       <thead><tr><th style="text-align:left;padding:3px 8px;background:var(--y-bg)">Infinitiv</th><th style="text-align:left;padding:3px 8px;background:var(--y-bg)">split</th><th style="text-align:left;padding:3px 8px;background:var(--y-bg)">Partizip II</th><th style="text-align:left;padding:3px 8px;background:var(--y-bg)">aux</th></tr></thead>
       <tbody>
         <tr><td class="val">anrufen</td><td class="val">an + <span class="hi">ge</span> + rufen</td><td class="val hi2">angerufen</td><td class="val">haben</td></tr>
@@ -3762,6 +3778,53 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 </div>
 
 <!-- FILL IN THE BLANK PRACTICE -->
+<div class="sub">Points & Scoring</div>
+<div class="card"><div class="card-head y">How Points Work</div><div class="card-body">
+  <table class="score-table">
+    <thead><tr><th>Subtest</th><th>Questions</th><th>Max Points</th><th>Pass (60%)</th><th>Strategy</th></tr></thead>
+    <tbody>
+      <tr><td>Leseverstehen Teil 1</td><td>5 matching</td><td>5</td><td>3</td><td>1 pt each</td></tr>
+      <tr><td>Leseverstehen Teil 2</td><td>5 MC</td><td>5</td><td>3</td><td>1 pt each</td></tr>
+      <tr><td>Leseverstehen Teil 3</td><td>10 matching</td><td>10</td><td>6</td><td>1 pt each</td></tr>
+      <tr><td>Sprachbausteine Teil 1</td><td>10 MC (a/b/c)</td><td>10</td><td>6</td><td>1 pt each</td></tr>
+      <tr><td>Sprachbausteine Teil 2</td><td>10 word bank</td><td>10</td><td>6</td><td>1 pt each</td></tr>
+      <tr><td>Hörverstehen Teil 1</td><td>5 R/F</td><td>5</td><td>3</td><td>1 pt each</td></tr>
+      <tr><td>Hörverstehen Teil 2</td><td>10 R/F</td><td>10</td><td>6</td><td>1 pt each</td></tr>
+      <tr><td>Hörverstehen Teil 3</td><td>5 R/F</td><td>5</td><td>3</td><td>1 pt each</td></tr>
+      <tr><td>Schriftlicher Ausdruck</td><td>1 email</td><td>20</td><td>12</td><td>Rubric: content, language, structure</td></tr>
+      <tr><td>Mündlicher Ausdruck</td><td>3 parts</td><td>30</td><td>18</td><td>Separate pass mark!</td></tr>
+    </tbody>
+  </table>
+  <div class="rule r" style="margin-top:10px"><div class="rule-title">Written total: 75 pts → need 45 (60%) · Oral total: 30 pts → need 18 (60%) — BOTH must pass independently!</div></div>
+  <div class="rule g" style="margin-top:6px"><div class="rule-title">Quick win: Sprachbausteine = 20 pts for just knowing grammar rules. Master this tab = +20 pts guaranteed.</div></div>
+</div></div>
+
+<!-- LAST WEEK PLAN -->
+<div class="sub">35-Day Countdown — Focused Study Plan</div>
+<div class="grid2">
+  <div class="card"><div class="card-head y">Weeks 1–3: Build & Drill</div><div class="card-body">
+    <div class="pair"><span class="pair-de">Grammar tab daily</span><span class="pair-en">15 min — articles, cases, adjective endings</span></div>
+    <div class="pair"><span class="pair-de">Connectors tab</span><span class="pair-en">Know ALL besondere Konnektoren cold</span></div>
+    <div class="pair"><span class="pair-de">Trap cards (this tab)</span><span class="pair-en">Do all 12 trap cards daily until automatic</span></div>
+    <div class="pair"><span class="pair-de">Write 1 email/day</span><span class="pair-en">Use writing prompts above, time yourself to 30 min</span></div>
+    <div class="pair"><span class="pair-de">Verb+Prep tab</span><span class="pair-en">Learn 10 verb+preposition pairs per day</span></div>
+    <div class="pair"><span class="pair-de">Listen to German daily</span><span class="pair-en">Podcasts, Netflix, YouTube in German 20+ min</span></div>
+  </div></div>
+  <div class="card"><div class="card-head r">Final Week (April 18–24): Simulate</div><div class="card-body">
+    <div class="pair"><span class="pair-de">Mon: Full mock test</span><span class="pair-en">Time yourself — 90 min Lesen+Sprach, 30 min Hören, 30 min Schreiben</span></div>
+    <div class="pair"><span class="pair-de">Tue: Review mistakes</span><span class="pair-en">Go through every wrong answer — why was it wrong?</span></div>
+    <div class="pair"><span class="pair-de">Wed: Oral practice</span><span class="pair-en">Rehearse all 3 speaking parts out loud</span></div>
+    <div class="pair"><span class="pair-de">Thu: Weak spots only</span><span class="pair-en">Only revise things you keep getting wrong</span></div>
+    <div class="pair"><span class="pair-de">Fri: Light review</span><span class="pair-en">Skim cheat sheet. No new content. Rest.</span></div>
+    <div class="pair"><span class="pair-de">Sat (exam day!)</span><span class="pair-en">Eat well, arrive early, read questions FIRST</span></div>
+    <div class="rule g" style="margin-top:8px"><div class="rule-title">Morning of exam: quickly scan Traps tab + Writing tab. That's it.</div></div>
+  </div></div>
+</div>
+</section>
+
+<section class="section" id="practice">
+<div class="sec-header"><div class="sec-eyebrow">Practice</div><div class="sec-title">Exam Practice — All Task Types</div></div>
+
 <div class="sub">Sprachbausteine Practice — Fill in the Gaps</div>
 <div class="rule b"><div class="rule-title">These mirror the exact format of TELC Teil 1 (a/b/c choice). Cover the answer and try first, then click "Zeige Lösungen".</div></div>
 
@@ -4098,299 +4161,6 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
 </div>
 
 <!-- ORAL EXAM PREPARATION -->
-<div class="sub">Mündlicher Ausdruck — Oral Exam Prep</div>
-
-<div class="oral-card">
-  <div class="oc-head y">Teil 1 — Einander kennenlernen (~3 min)</div>
-  <div class="oc-body">
-    <div class="rule"><div class="rule-title">⚡ Do this FIRST before anything else — ask how to address each other</div>
-      <p>Your exam partner is a fellow candidate, not the examiner. Asking shows social awareness — a B1 skill.</p>
-    </div>
-    <div class="ex" style="margin-bottom:10px">
-      <div class="ex-de">Sollen wir uns duzen oder siezen?</div>
-      <div class="ex-en">Should we use du or Sie with each other?</div>
-    </div>
-    <div class="ex" style="margin-bottom:10px">
-      <div class="ex-de">Ich würde vorschlagen, dass wir uns duzen — ist das okay für dich/Sie?</div>
-      <div class="ex-en">I'd suggest we use du — is that okay with you?</div>
-    </div>
-    <div class="ex" style="margin-bottom:10px">
-      <div class="ex-de">Darf ich du sagen? / Können wir du sagen?</div>
-      <div class="ex-en">May I say du? / Can we use du?</div>
-    </div>
-    <div class="rule b" style="margin-bottom:10px"><div class="rule-title">Typical responses:</div>
-      <p>✓ "Ja, gerne!" / "Natürlich, kein Problem." / "Ja, das ist mir recht."</p>
-    </div>
-    <div class="sub2">Key questions you may be asked:</div>
-    <div class="oc-scenario" style="margin-bottom:8px">Introduce yourself: name, age, where you're from, where you live, work/study, family, hobbies, why you're learning German.</div>
-    <div class="pair"><span class="pair-de">Woher kommen Sie / kommst du?</span><span class="pair-en">Where are you from?</span></div>
-    <div class="pair"><span class="pair-de">Seit wann lernen Sie Deutsch?</span><span class="pair-en">How long have you been learning German?</span></div>
-    <div class="pair"><span class="pair-de">Was machen Sie beruflich?</span><span class="pair-en">What do you do professionally?</span></div>
-    <div class="pair"><span class="pair-de">Was sind Ihre Hobbys?</span><span class="pair-en">What are your hobbies?</span></div>
-    <div class="pair"><span class="pair-de">Warum lernen Sie Deutsch?</span><span class="pair-en">Why are you learning German?</span></div>
-    <div class="oc-phrases">
-      <span class="oc-phrase">Ich heiße... und komme aus...</span>
-      <span class="oc-phrase">Ich wohne seit ... in Berlin.</span>
-      <span class="oc-phrase">Beruflich arbeite ich als...</span>
-      <span class="oc-phrase">In meiner Freizeit... ich gern...</span>
-      <span class="oc-phrase">Ich lerne Deutsch, weil...</span>
-      <span class="oc-phrase">Ich bin verheiratet / ledig / geschieden.</span>
-    </div>
-  </div>
-</div>
-
-<div class="oral-card">
-  <div class="oc-head p">Teil 1b — Vortrag / Kurzpräsentation (~3–4 min) · Choose a topic · speak freely</div>
-  <div class="oc-body">
-    <div class="rule"><div class="rule-title">4-Part Structure — works for ANY topic</div>
-      <p><span class="hi">① Einstieg</span> — Aufmerksamkeit + These (30 Sek) &nbsp;·&nbsp; <span class="hi2">② Argument 1</span> — Vorteil / Pro + Beispiel (45 Sek) &nbsp;·&nbsp; <span class="hi3">③ Argument 2</span> — Nachteil / Kontra (45 Sek) &nbsp;·&nbsp; <span class="hi4">④ Fazit</span> — eigene Meinung + Ausblick (30 Sek)</p>
-    </div>
-    <div class="grid2" style="gap:8px;margin-top:10px">
-      <div>
-        <div class="sub2">🎬 Einstieg / Opening</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Ich möchte heute über … sprechen, weil …</span>
-          <span class="oc-phrase">Dieses Thema ist heutzutage sehr aktuell.</span>
-          <span class="oc-phrase">Viele Menschen beschäftigen sich mit der Frage, ob …</span>
-          <span class="oc-phrase">Das Thema … betrifft uns alle im Alltag.</span>
-          <span class="oc-phrase">Mein Vortrag gliedert sich in drei Teile: Erstens …</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">➕ Argumente hinzufügen</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Ein weiterer wichtiger Aspekt ist …</span>
-          <span class="oc-phrase">Hinzu kommt, dass …</span>
-          <span class="oc-phrase">Außerdem sollte man bedenken, dass …</span>
-          <span class="oc-phrase">Besonders wichtig finde ich, dass …</span>
-          <span class="oc-phrase">Das zeigt sich zum Beispiel daran, dass …</span>
-        </div>
-      </div>
-      <div>
-        <div class="sub2">↔ Kontrast / Gegenargumente</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Andererseits / Auf der anderen Seite …</span>
-          <span class="oc-phrase">Dabei sollte man jedoch nicht vergessen, dass …</span>
-          <span class="oc-phrase">Es gibt aber auch Menschen, die denken, dass …</span>
-          <span class="oc-phrase">Das hat allerdings auch Nachteile: …</span>
-          <span class="oc-phrase">Trotzdem bin ich der Meinung, dass …</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">🏁 Fazit / Abschluss</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Zusammenfassend lässt sich sagen, dass …</span>
-          <span class="oc-phrase">Abschließend möchte ich betonen, dass …</span>
-          <span class="oc-phrase">Ich komme zu dem Schluss, dass …</span>
-          <span class="oc-phrase">Alles in allem denke ich, dass …</span>
-          <span class="oc-phrase">Vielen Dank für Ihre Aufmerksamkeit.</span>
-        </div>
-      </div>
-    </div>
-    <div class="rule r" style="margin-top:8px"><div class="rule-title">⚠ Kein Wissen zum Thema? Say:</div>
-      <p>"Dieses Thema ist zwar nicht mein Spezialgebiet, aber ich versuche, meine Gedanken dazu zu teilen." → then go straight to 4-part structure. You need no facts — just a clear opinion with reasoning.</p>
-    </div>
-  </div>
-</div>
-
-<div class="oral-card">
-  <div class="oc-head g">Teil 1b (variant) — Bildbeschreibung · Describing a picture</div>
-  <div class="oc-body">
-    <div class="rule g"><div class="rule-title">4-step structure: Where → Who/What → Action → Reaction/Opinion</div>
-      <p>Step through in order. You do not need to know every word — describe what you see and paraphrase anything you cannot name.</p>
-    </div>
-    <div class="grid2" style="gap:8px;margin-top:10px">
-      <div>
-        <div class="sub2">📍 Ort / Situation — Where &amp; When</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Das Foto zeigt … / Auf dem Bild sieht man …</span>
-          <span class="oc-phrase">Die Szene spielt sich … ab. (in einer Küche / im Freien / in einem Büro)</span>
-          <span class="oc-phrase">Im Vordergrund / Im Hintergrund / In der Mitte sieht man …</span>
-          <span class="oc-phrase">Es scheint, als ob es … ist. (Sommer / ein Arbeitstag / Abend)</span>
-          <span class="oc-phrase">Die Aufnahme wirkt … (modern / alltäglich / fröhlich)</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">👥 Personen — Who &amp; Appearance</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Auf dem Bild sind … Personen zu sehen.</span>
-          <span class="oc-phrase">Es handelt sich um … (eine Frau mittleren Alters / ein junges Paar / Kinder)</span>
-          <span class="oc-phrase">Die Person trägt … und sieht … aus.</span>
-          <span class="oc-phrase">Man kann nicht genau erkennen, aber es scheint, dass …</span>
-          <span class="oc-phrase">Die Personen sind wahrscheinlich … (Kollegen / Familienmitglieder / Touristen)</span>
-        </div>
-      </div>
-      <div>
-        <div class="sub2">🏃 Aktion — What are they doing</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Sie / Er / Die Personen … (kochen / diskutieren / lachen / arbeiten)</span>
-          <span class="oc-phrase">Es wirkt so, als ob sie gerade … (eine Besprechung haben / essen)</span>
-          <span class="oc-phrase">Man sieht, dass jemand … (auf etwas zeigt / ein Dokument liest)</span>
-          <span class="oc-phrase">Die Stimmung auf dem Bild wirkt … (entspannt / angespannt / fröhlich)</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">💬 Reaktion / eigene Meinung</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Das Bild erinnert mich an …, weil …</span>
-          <span class="oc-phrase">Diese Situation kenne ich aus meinem Alltag / meiner Erfahrung.</span>
-          <span class="oc-phrase">Ich finde dieses Bild interessant, weil es zeigt, dass …</span>
-          <span class="oc-phrase">Das Foto macht mich … (nachdenklich / froh / neugierig), weil …</span>
-          <span class="oc-phrase">Meiner Meinung nach ist [Thema des Bildes] heutzutage sehr wichtig, weil …</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">🔤 Useful hedges when unsure</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Ich bin nicht ganz sicher, aber ich glaube, es ist …</span>
-          <span class="oc-phrase">Das könnte … sein / Das sieht aus wie …</span>
-          <span class="oc-phrase">Man könnte vermuten, dass …</span>
-        </div>
-      </div>
-    </div>
-    <div class="rule r" style="margin-top:8px"><div class="rule-title">⚠ Don't list objects silently — connect every observation to a full sentence. "Ein Tisch" → "Im Vordergrund steht ein Tisch, an dem zwei Personen sitzen."</div></div>
-  </div>
-</div>
-
-<div class="oral-card">
-  <div class="oc-head b">Teil 2 — Über ein Thema sprechen / Meinung begründen (~5 min)</div>
-  <div class="oc-body">
-    <div class="oc-scenario">You get a question or picture about a general topic. You present your opinion, give reasons, react to your partner's ideas. Common topics: internet/social media, health, environment, work/study, city vs. countryside, technology, education.</div>
-    <div class="rule b"><div class="rule-title">Discussion Cycle — repeat as needed</div>
-      <p><span class="hi2">① Position</span> — Standpunkt klar nennen &nbsp;·&nbsp; <span class="hi2">② Begründung</span> — Grund oder Beispiel geben &nbsp;·&nbsp; <span class="hi2">③ Reaktion</span> — auf Partner eingehen &nbsp;·&nbsp; <span class="hi2">④ Einigung</span> — Kompromiss vorschlagen</p>
-    </div>
-    <div class="sub2">Structure your answer:</div>
-    <div class="ex b"><div class="ex-de">1. Meinung nennen: "Ich bin der Meinung, dass... / Meiner Meinung nach..."</div></div>
-    <div class="ex b"><div class="ex-de">2. Begründen: "Das denke ich, weil... / Ein Grund dafür ist, dass..."</div></div>
-    <div class="ex b"><div class="ex-de">3. Beispiel geben: "Zum Beispiel... / In meiner eigenen Erfahrung..."</div></div>
-    <div class="ex b"><div class="ex-de">4. Auf Partner reagieren: "Das stimmt, aber... / Ich sehe das ein bisschen anders..."</div></div>
-    <div class="grid2" style="gap:8px;margin-top:8px">
-      <div>
-        <div class="sub2">✅ Zustimmung / Agreeing</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Ich finde es wichtig, dass...</span>
-          <span class="oc-phrase">Auf der einen Seite... auf der anderen Seite...</span>
-          <span class="oc-phrase">Das sehe ich genauso / ähnlich.</span>
-          <span class="oc-phrase">Dazu möchte ich sagen, dass...</span>
-          <span class="oc-phrase">Was mich betrifft...</span>
-          <span class="oc-phrase">Das ist ein guter Punkt. Ich würde noch hinzufügen …</span>
-          <span class="oc-phrase">Ja, genau. Ich bin auch der Meinung, dass …</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">👂 Auf Partner reagieren</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Wie Sie sagten / Wie du gesagt hast, …</span>
-          <span class="oc-phrase">Das erinnert mich daran, dass …</span>
-          <span class="oc-phrase">Das ist ein interessanter Gedanke. Ich denke auch, dass …</span>
-          <span class="oc-phrase">Dazu möchte ich noch sagen, dass …</span>
-          <span class="oc-phrase">Das stimmt. Ich möchte das noch ergänzen: …</span>
-          <span class="oc-phrase">Könnten Sie das erklären?</span>
-        </div>
-      </div>
-      <div>
-        <div class="sub2">❌ Höflich widersprechen</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Das sehe ich etwas anders, weil …</span>
-          <span class="oc-phrase">Ich verstehe Ihren Standpunkt, aber meiner Meinung nach …</span>
-          <span class="oc-phrase">Da bin ich nicht ganz einverstanden, denn …</span>
-          <span class="oc-phrase">Das mag stimmen, aber man sollte auch bedenken, dass …</span>
-          <span class="oc-phrase">Ja, aber haben Sie auch daran gedacht, dass …?</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">🤝 Einigung / Abschluss</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Einigen wir uns darauf, dass …</span>
-          <span class="oc-phrase">Ich denke, wir sind uns einig, dass … die beste Lösung ist.</span>
-          <span class="oc-phrase">Also, am Ende kommen wir zu dem Schluss, dass …</span>
-          <span class="oc-phrase">Dann sind wir uns einig: Wir entscheiden uns für …</span>
-          <span class="oc-phrase">Super, das klingt nach einem guten Kompromiss.</span>
-          <span class="oc-phrase">Gut, dann machen wir das so.</span>
-        </div>
-      </div>
-    </div>
-    <div class="rule r" style="margin-top:8px"><div class="rule-title">⚠ Pflicht in Teil 2: Du musst mindestens einmal widersprechen UND am Ende selbst die Diskussion beenden — warte nicht auf den Prüfer!</div>
-      <p>→ "Einigen wir uns dann darauf, dass …" — das zeigt Selbstsicherheit.</p>
-    </div>
-  </div>
-</div>
-
-<div class="oral-card">
-  <div class="oc-head g">Teil 3 — Gemeinsam etwas planen (~5 min)</div>
-  <div class="oc-body">
-    <div class="oc-scenario">You and your partner must plan something together (e.g. office party, farewell event, birthday party, team outing). Make suggestions, react to theirs, agree on a plan. You don't have to fully agree — the point is to COMMUNICATE.</div>
-    <div class="sub2">Sample scenarios:</div>
-    <div class="pair"><span class="pair-de">Sie planen eine Abschiedsparty für einen Kollegen.</span><span class="pair-en">Plan a farewell party for a colleague.</span></div>
-    <div class="pair"><span class="pair-de">Sie richten gemeinsam die Büroküche ein.</span><span class="pair-en">Set up the office kitchen together.</span></div>
-    <div class="pair"><span class="pair-de">Sie planen die Weihnachtsfeier für alle Mitarbeiter.</span><span class="pair-en">Plan the Christmas party for all staff.</span></div>
-    <div class="sub2">Key phrases for planning:</div>
-    <div class="oc-phrases">
-      <span class="oc-phrase">Wie wäre es mit + Dat?</span>
-      <span class="oc-phrase">Ich schlage vor, dass wir...</span>
-      <span class="oc-phrase">Was hältst du/Sie davon?</span>
-      <span class="oc-phrase">Das ist eine gute Idee!</span>
-      <span class="oc-phrase">Ich bin damit einverstanden.</span>
-      <span class="oc-phrase">Das finde ich weniger gut, weil...</span>
-      <span class="oc-phrase">Könnten wir stattdessen...?</span>
-      <span class="oc-phrase">Einigen wir uns auf...</span>
-      <span class="oc-phrase">Also, wir machen dann Folgendes:</span>
-      <span class="oc-phrase">Wer übernimmt welche Aufgabe?</span>
-    </div>
-  </div>
-</div>
-
-<div class="oral-card">
-  <div class="oc-head r">🆘 Rettungsphrasen — When you get stuck</div>
-  <div class="oc-body">
-    <div class="grid2" style="gap:8px">
-      <div>
-        <div class="sub2">❓ Nicht verstanden</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Könnten Sie das bitte wiederholen?</span>
-          <span class="oc-phrase">Ich habe das leider nicht ganz verstanden.</span>
-          <span class="oc-phrase">Meinen Sie damit, dass …? (eigene Umschreibung)</span>
-          <span class="oc-phrase">Könnten Sie das bitte anders erklären?</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">⏳ Zeit zum Nachdenken</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Das ist eine interessante Frage. Lassen Sie mich kurz nachdenken …</span>
-          <span class="oc-phrase">Hmm, ich überlege gerade …</span>
-          <span class="oc-phrase">Das muss ich erst einmal überdenken.</span>
-          <span class="oc-phrase">Einen Moment bitte, ich sammle meine Gedanken.</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">🔇 Weiterreden / Pause füllen</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Dazu fällt mir noch ein, dass …</span>
-          <span class="oc-phrase">Ein Beispiel dafür wäre …</span>
-          <span class="oc-phrase">Das hängt auch damit zusammen, dass …</span>
-          <span class="oc-phrase">Was ich damit sagen möchte, ist …</span>
-        </div>
-      </div>
-      <div>
-        <div class="sub2">🤷 Kein Wissen / Keine Fakten</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Ich bin kein Experte auf diesem Gebiet, aber …</span>
-          <span class="oc-phrase">Soweit ich weiß …</span>
-          <span class="oc-phrase">Wenn ich mich nicht irre, …</span>
-          <span class="oc-phrase">Ich habe darüber nachgedacht und denke, dass …</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">💬 Meinung ausdrücken</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Ich bin der Meinung / Ansicht, dass …</span>
-          <span class="oc-phrase">Ich finde es wichtig, dass …</span>
-          <span class="oc-phrase">Ich halte … für sehr wichtig / problematisch.</span>
-          <span class="oc-phrase">Aus meiner Sicht / meiner Erfahrung nach …</span>
-        </div>
-        <div class="sub2" style="margin-top:8px">📌 Beispiel geben</div>
-        <div class="oc-phrases">
-          <span class="oc-phrase">Zum Beispiel … / Als Beispiel kann ich … nennen.</span>
-          <span class="oc-phrase">Das sieht man gut an dem Beispiel von …</span>
-          <span class="oc-phrase">Stellen Sie sich vor, dass …</span>
-          <span class="oc-phrase">In meinem Alltag erlebe ich das, wenn …</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card" style="margin-bottom:14px">
-  <div class="card-head y">⭐ 5 Golden Rules — Oral Exam Mindset</div>
-  <div class="card-body">
-    <div class="ex"><div class="ex-de">① Struktur schlägt Wissen.</div><div class="ex-en">Erstens / Zweitens / Fazit always sounds better than random facts. Use the 4-part structure for every topic.</div></div>
-    <div class="ex"><div class="ex-de">② Immer einen Grund nennen.</div><div class="ex-en">Never just "Ich finde das gut." — always add "… weil …" or "… denn …" after every opinion.</div></div>
-    <div class="ex"><div class="ex-de">③ Auf den Partner reagieren.</div><div class="ex-en">"Wie Sie sagten, …" or "Das erinnert mich daran, dass …" — shows active listening to the examiner.</div></div>
-    <div class="ex"><div class="ex-de">④ Ruhig bleiben bei unbekannten Themen.</div><div class="ex-en">You need no facts. Just speak about Vor- und Nachteile or Auswirkungen auf den Alltag. Opinions don't need expertise.</div></div>
-    <div class="ex"><div class="ex-de">⑤ Diskussion selbst beenden.</div><div class="ex-en">Don't wait for the examiner — say: "Einigen wir uns dann darauf, dass …" This shows confidence and fluency.</div></div>
-  </div>
-</div>
-
 <!-- READING STRATEGIES -->
 <div class="sub">Leseverstehen — Exam Strategies</div>
 <div class="grid3">
@@ -5168,53 +4938,200 @@ tbody td:first-child{color:var(--muted);font-family:'IBM Plex Mono',monospace;fo
   </div>
 </div></div>
 
-<div class="sub">Points & Scoring</div>
-<div class="card"><div class="card-head y">How Points Work</div><div class="card-body">
-  <table class="score-table">
-    <thead><tr><th>Subtest</th><th>Questions</th><th>Max Points</th><th>Pass (60%)</th><th>Strategy</th></tr></thead>
-    <tbody>
-      <tr><td>Leseverstehen Teil 1</td><td>5 matching</td><td>5</td><td>3</td><td>1 pt each</td></tr>
-      <tr><td>Leseverstehen Teil 2</td><td>5 MC</td><td>5</td><td>3</td><td>1 pt each</td></tr>
-      <tr><td>Leseverstehen Teil 3</td><td>10 matching</td><td>10</td><td>6</td><td>1 pt each</td></tr>
-      <tr><td>Sprachbausteine Teil 1</td><td>10 MC (a/b/c)</td><td>10</td><td>6</td><td>1 pt each</td></tr>
-      <tr><td>Sprachbausteine Teil 2</td><td>10 word bank</td><td>10</td><td>6</td><td>1 pt each</td></tr>
-      <tr><td>Hörverstehen Teil 1</td><td>5 R/F</td><td>5</td><td>3</td><td>1 pt each</td></tr>
-      <tr><td>Hörverstehen Teil 2</td><td>10 R/F</td><td>10</td><td>6</td><td>1 pt each</td></tr>
-      <tr><td>Hörverstehen Teil 3</td><td>5 R/F</td><td>5</td><td>3</td><td>1 pt each</td></tr>
-      <tr><td>Schriftlicher Ausdruck</td><td>1 email</td><td>20</td><td>12</td><td>Rubric: content, language, structure</td></tr>
-      <tr><td>Mündlicher Ausdruck</td><td>3 parts</td><td>30</td><td>18</td><td>Separate pass mark!</td></tr>
-    </tbody>
-  </table>
-  <div class="rule r" style="margin-top:10px"><div class="rule-title">Written total: 75 pts → need 45 (60%) · Oral total: 30 pts → need 18 (60%) — BOTH must pass independently!</div></div>
-  <div class="rule g" style="margin-top:6px"><div class="rule-title">Quick win: Sprachbausteine = 20 pts for just knowing grammar rules. Master this tab = +20 pts guaranteed.</div></div>
-</div></div>
 
-<!-- LAST WEEK PLAN -->
-<div class="sub">35-Day Countdown — Focused Study Plan</div>
-<div class="grid2">
-  <div class="card"><div class="card-head y">Weeks 1–3: Build & Drill</div><div class="card-body">
-    <div class="pair"><span class="pair-de">Grammar tab daily</span><span class="pair-en">15 min — articles, cases, adjective endings</span></div>
-    <div class="pair"><span class="pair-de">Connectors tab</span><span class="pair-en">Know ALL besondere Konnektoren cold</span></div>
-    <div class="pair"><span class="pair-de">Trap cards (this tab)</span><span class="pair-en">Do all 12 trap cards daily until automatic</span></div>
-    <div class="pair"><span class="pair-de">Write 1 email/day</span><span class="pair-en">Use writing prompts above, time yourself to 30 min</span></div>
-    <div class="pair"><span class="pair-de">Verb+Prep tab</span><span class="pair-en">Learn 10 verb+preposition pairs per day</span></div>
-    <div class="pair"><span class="pair-de">Listen to German daily</span><span class="pair-en">Podcasts, Netflix, YouTube in German 20+ min</span></div>
-  </div></div>
-  <div class="card"><div class="card-head r">Final Week (April 18–24): Simulate</div><div class="card-body">
-    <div class="pair"><span class="pair-de">Mon: Full mock test</span><span class="pair-en">Time yourself — 90 min Lesen+Sprach, 30 min Hören, 30 min Schreiben</span></div>
-    <div class="pair"><span class="pair-de">Tue: Review mistakes</span><span class="pair-en">Go through every wrong answer — why was it wrong?</span></div>
-    <div class="pair"><span class="pair-de">Wed: Oral practice</span><span class="pair-en">Rehearse all 3 speaking parts out loud</span></div>
-    <div class="pair"><span class="pair-de">Thu: Weak spots only</span><span class="pair-en">Only revise things you keep getting wrong</span></div>
-    <div class="pair"><span class="pair-de">Fri: Light review</span><span class="pair-en">Skim cheat sheet. No new content. Rest.</span></div>
-    <div class="pair"><span class="pair-de">Sat (exam day!)</span><span class="pair-en">Eat well, arrive early, read questions FIRST</span></div>
-    <div class="rule g" style="margin-top:8px"><div class="rule-title">Morning of exam: quickly scan Traps tab + Writing tab. That's it.</div></div>
-  </div></div>
-</div>
 </section>
 
 <!-- ══════════════════════ SPRECHEN ══════════════════════ -->
 <section id="sprechen" class="section"><h1>🗣 Sprechen</h1>
-<p class="sub">100 Redemittel for TELC B1 oral exam Teil 3 — Gemeinsam etwas planen. Pick 3–4 phrases per category that feel natural. Focus on "Höflich widersprechen" — that is where most points are won.</p>
+<p class="sub">Complete oral exam prep: Teil 1 (self-introduction), Teil 1b (presentation + picture description), Teil 2 (discussion), Teil 3 (planning with 100 Redemittel). Focus on "Höflich widersprechen" — that is where most points are won.</p>
+
+<div class="sub">Teil 1 &amp; 1b — Kennenlernen, Vortrag, Bildbeschreibung</div>
+
+<div class="oral-card">
+  <div class="oc-head y">Teil 1 — Einander kennenlernen (~3 min)</div>
+  <div class="oc-body">
+    <div class="rule"><div class="rule-title">⚡ Do this FIRST before anything else — ask how to address each other</div>
+      <p>Your exam partner is a fellow candidate, not the examiner. Asking shows social awareness — a B1 skill.</p>
+    </div>
+    <div class="ex" style="margin-bottom:10px"><div class="ex-de">Sollen wir uns duzen oder siezen?</div><div class="ex-en">Should we use du or Sie with each other?</div></div>
+    <div class="ex" style="margin-bottom:10px"><div class="ex-de">Ich würde vorschlagen, dass wir uns duzen — ist das okay für dich/Sie?</div><div class="ex-en">I'd suggest we use du — is that okay with you?</div></div>
+    <div class="rule b" style="margin-bottom:10px"><div class="rule-title">Typical responses:</div><p>✓ "Ja, gerne!" / "Natürlich, kein Problem." / "Ja, das ist mir recht."</p></div>
+    <div class="sub2">Key questions you may be asked:</div>
+    <div class="oc-scenario" style="margin-bottom:8px">Introduce yourself: name, age, where you're from, where you live, work/study, family, hobbies, why you're learning German.</div>
+    <div class="pair"><span class="pair-de">Woher kommen Sie / kommst du?</span><span class="pair-en">Where are you from?</span></div>
+    <div class="pair"><span class="pair-de">Seit wann lernen Sie Deutsch?</span><span class="pair-en">How long have you been learning German?</span></div>
+    <div class="pair"><span class="pair-de">Was machen Sie beruflich?</span><span class="pair-en">What do you do professionally?</span></div>
+    <div class="pair"><span class="pair-de">Was sind Ihre Hobbys?</span><span class="pair-en">What are your hobbies?</span></div>
+    <div class="pair"><span class="pair-de">Warum lernen Sie Deutsch?</span><span class="pair-en">Why are you learning German?</span></div>
+    <div class="oc-phrases">
+      <span class="oc-phrase">Ich heiße... und komme aus...</span>
+      <span class="oc-phrase">Ich wohne seit ... in Berlin.</span>
+      <span class="oc-phrase">Beruflich arbeite ich als...</span>
+      <span class="oc-phrase">In meiner Freizeit... ich gern...</span>
+      <span class="oc-phrase">Ich lerne Deutsch, weil...</span>
+      <span class="oc-phrase">Ich bin verheiratet / ledig / geschieden.</span>
+    </div>
+  </div>
+</div>
+
+<div class="oral-card">
+  <div class="oc-head p">Teil 1b — Vortrag / Kurzpräsentation (~3–4 min) · Choose a topic · speak freely</div>
+  <div class="oc-body">
+    <div class="rule"><div class="rule-title">4-Part Structure — works for ANY topic</div>
+      <p><span class="hi">① Einstieg</span> — Aufmerksamkeit + These (30 Sek) &nbsp;·&nbsp; <span class="hi2">② Argument 1</span> — Vorteil / Pro + Beispiel (45 Sek) &nbsp;·&nbsp; <span class="hi3">③ Argument 2</span> — Nachteil / Kontra (45 Sek) &nbsp;·&nbsp; <span class="hi4">④ Fazit</span> — eigene Meinung + Ausblick (30 Sek)</p>
+    </div>
+    <div class="grid2" style="gap:8px;margin-top:10px">
+      <div>
+        <div class="sub2">🎬 Einstieg / Opening</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Ich möchte heute über … sprechen, weil …</span>
+          <span class="oc-phrase">Dieses Thema ist heutzutage sehr aktuell.</span>
+          <span class="oc-phrase">Viele Menschen beschäftigen sich mit der Frage, ob …</span>
+          <span class="oc-phrase">Das Thema … betrifft uns alle im Alltag.</span>
+          <span class="oc-phrase">Mein Vortrag gliedert sich in drei Teile: Erstens …</span>
+        </div>
+        <div class="sub2" style="margin-top:8px">➕ Argumente hinzufügen</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Ein weiterer wichtiger Aspekt ist …</span>
+          <span class="oc-phrase">Hinzu kommt, dass …</span>
+          <span class="oc-phrase">Außerdem sollte man bedenken, dass …</span>
+          <span class="oc-phrase">Besonders wichtig finde ich, dass …</span>
+          <span class="oc-phrase">Das zeigt sich zum Beispiel daran, dass …</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub2">↔ Kontrast / Gegenargumente</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Andererseits / Auf der anderen Seite …</span>
+          <span class="oc-phrase">Dabei sollte man jedoch nicht vergessen, dass …</span>
+          <span class="oc-phrase">Es gibt aber auch Menschen, die denken, dass …</span>
+          <span class="oc-phrase">Das hat allerdings auch Nachteile: …</span>
+          <span class="oc-phrase">Trotzdem bin ich der Meinung, dass …</span>
+        </div>
+        <div class="sub2" style="margin-top:8px">🏁 Fazit / Abschluss</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Zusammenfassend lässt sich sagen, dass …</span>
+          <span class="oc-phrase">Abschließend möchte ich betonen, dass …</span>
+          <span class="oc-phrase">Ich komme zu dem Schluss, dass …</span>
+          <span class="oc-phrase">Alles in allem denke ich, dass …</span>
+          <span class="oc-phrase">Vielen Dank für Ihre Aufmerksamkeit.</span>
+        </div>
+      </div>
+    </div>
+    <div class="rule r" style="margin-top:8px"><div class="rule-title">⚠ Kein Wissen zum Thema? Say:</div>
+      <p>"Dieses Thema ist zwar nicht mein Spezialgebiet, aber ich versuche, meine Gedanken dazu zu teilen." → then go straight to 4-part structure. No facts needed — just a clear opinion with reasoning.</p>
+    </div>
+  </div>
+</div>
+
+<div class="oral-card">
+  <div class="oc-head g">Teil 1b (variant) — Bildbeschreibung · Describing a picture</div>
+  <div class="oc-body">
+    <div class="rule g"><div class="rule-title">4-step structure: Where → Who/What → Action → Reaction/Opinion</div>
+      <p>Step through in order. You don't need every word — describe what you see and paraphrase anything you can't name.</p>
+    </div>
+    <div class="grid2" style="gap:8px;margin-top:10px">
+      <div>
+        <div class="sub2">📍 Ort / Situation</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Das Foto zeigt … / Auf dem Bild sieht man …</span>
+          <span class="oc-phrase">Die Szene spielt sich … ab. (in einer Küche / im Freien)</span>
+          <span class="oc-phrase">Im Vordergrund / Im Hintergrund / In der Mitte sieht man …</span>
+          <span class="oc-phrase">Es scheint, als ob es … ist. (Sommer / ein Arbeitstag)</span>
+          <span class="oc-phrase">Die Aufnahme wirkt … (modern / alltäglich / fröhlich)</span>
+        </div>
+        <div class="sub2" style="margin-top:8px">👥 Personen</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Auf dem Bild sind … Personen zu sehen.</span>
+          <span class="oc-phrase">Es handelt sich um … (eine Frau mittleren Alters / Kinder)</span>
+          <span class="oc-phrase">Die Person trägt … und sieht … aus.</span>
+          <span class="oc-phrase">Man kann nicht genau erkennen, aber es scheint, dass …</span>
+          <span class="oc-phrase">Die Personen sind wahrscheinlich … (Kollegen / Touristen)</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub2">🏃 Aktion</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Sie / Er / Die Personen … (kochen / diskutieren / lachen)</span>
+          <span class="oc-phrase">Es wirkt so, als ob sie gerade … (essen / eine Besprechung haben)</span>
+          <span class="oc-phrase">Die Stimmung auf dem Bild wirkt … (entspannt / fröhlich)</span>
+        </div>
+        <div class="sub2" style="margin-top:8px">💬 Reaktion / eigene Meinung</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Das Bild erinnert mich an …, weil …</span>
+          <span class="oc-phrase">Ich finde dieses Bild interessant, weil es zeigt, dass …</span>
+          <span class="oc-phrase">Meiner Meinung nach ist [Thema] heutzutage sehr wichtig, weil …</span>
+        </div>
+        <div class="sub2" style="margin-top:8px">🔤 Hedges when unsure</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Ich bin nicht ganz sicher, aber ich glaube, es ist …</span>
+          <span class="oc-phrase">Das könnte … sein / Das sieht aus wie …</span>
+          <span class="oc-phrase">Man könnte vermuten, dass …</span>
+        </div>
+      </div>
+    </div>
+    <div class="rule r" style="margin-top:8px"><div class="rule-title">⚠ Never just list objects — always full sentences. "Ein Tisch" → "Im Vordergrund steht ein Tisch, an dem zwei Personen sitzen."</div></div>
+  </div>
+</div>
+
+<div class="oral-card">
+  <div class="oc-head b">Teil 2 — Über ein Thema sprechen / Meinung begründen (~5 min)</div>
+  <div class="oc-body">
+    <div class="oc-scenario">You get a question or picture about a general topic. Present your opinion, give reasons, react to your partner's ideas. Common topics: internet/social media, health, environment, work/study, city vs. countryside, technology, education.</div>
+    <div class="rule b"><div class="rule-title">Discussion Cycle — repeat as needed</div>
+      <p><span class="hi2">① Position</span> — Standpunkt klar nennen &nbsp;·&nbsp; <span class="hi2">② Begründung</span> — Grund oder Beispiel geben &nbsp;·&nbsp; <span class="hi2">③ Reaktion</span> — auf Partner eingehen &nbsp;·&nbsp; <span class="hi2">④ Einigung</span> — Kompromiss vorschlagen</p>
+    </div>
+    <div class="grid2" style="gap:8px;margin-top:8px">
+      <div>
+        <div class="sub2">✅ Zustimmung / Agreeing</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Das sehe ich genauso / ähnlich.</span>
+          <span class="oc-phrase">Das ist ein guter Punkt. Ich würde noch hinzufügen …</span>
+          <span class="oc-phrase">Ja, genau. Ich bin auch der Meinung, dass …</span>
+          <span class="oc-phrase">Dazu möchte ich sagen, dass...</span>
+        </div>
+        <div class="sub2" style="margin-top:8px">👂 Auf Partner reagieren</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Wie Sie sagten / Wie du gesagt hast, …</span>
+          <span class="oc-phrase">Das ist ein interessanter Gedanke. Ich denke auch, dass …</span>
+          <span class="oc-phrase">Das stimmt. Ich möchte das noch ergänzen: …</span>
+          <span class="oc-phrase">Könnten Sie das erklären?</span>
+        </div>
+      </div>
+      <div>
+        <div class="sub2">❌ Höflich widersprechen</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Das sehe ich etwas anders, weil …</span>
+          <span class="oc-phrase">Ich verstehe Ihren Standpunkt, aber meiner Meinung nach …</span>
+          <span class="oc-phrase">Da bin ich nicht ganz einverstanden, denn …</span>
+          <span class="oc-phrase">Das mag stimmen, aber man sollte auch bedenken, dass …</span>
+        </div>
+        <div class="sub2" style="margin-top:8px">🤝 Einigung / Abschluss</div>
+        <div class="oc-phrases">
+          <span class="oc-phrase">Einigen wir uns darauf, dass …</span>
+          <span class="oc-phrase">Also, am Ende kommen wir zu dem Schluss, dass …</span>
+          <span class="oc-phrase">Gut, dann machen wir das so.</span>
+        </div>
+      </div>
+    </div>
+    <div class="rule r" style="margin-top:8px"><div class="rule-title">⚠ Must-do: widersprechen at least once AND end the discussion yourself — don't wait for the examiner.</div>
+      <p>→ "Einigen wir uns dann darauf, dass …" — das zeigt Selbstsicherheit.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:14px">
+  <div class="card-head y">⭐ 5 Golden Rules — Oral Exam Mindset</div>
+  <div class="card-body">
+    <div class="ex"><div class="ex-de">① Struktur schlägt Wissen.</div><div class="ex-en">Use the 4-part structure. Erstens / Zweitens / Fazit always sounds better than random facts.</div></div>
+    <div class="ex"><div class="ex-de">② Immer einen Grund nennen.</div><div class="ex-en">Never just "Ich finde das gut." — always add "… weil …" or "… denn …".</div></div>
+    <div class="ex"><div class="ex-de">③ Auf den Partner reagieren.</div><div class="ex-en">"Wie Sie sagten, …" shows active listening and earns marks.</div></div>
+    <div class="ex"><div class="ex-de">④ Ruhig bleiben bei unbekannten Themen.</div><div class="ex-en">No facts needed. Speak about Vor- und Nachteile or Auswirkungen auf den Alltag.</div></div>
+    <div class="ex"><div class="ex-de">⑤ Diskussion selbst beenden.</div><div class="ex-en">"Einigen wir uns dann darauf, dass …" — shows confidence.</div></div>
+  </div>
+</div>
+
+<div class="sub">Teil 3 — 100 Redemittel (Gemeinsam etwas planen)</div>
 
 <div class="oral-card">
   <div class="oc-head b">Teil 3 — Gemeinsam etwas planen (~5 min)</div>
@@ -5421,7 +5338,9 @@ const sectionGroups = {
   grammar:'grp-grammar', cases:'grp-grammar', adjectives:'grp-grammar',
   tenses:'grp-verbs', specialverbs:'grp-verbs', verbprep:'grp-verbs', passiv:'grp-verbs', relativsatz:'grp-verbs',
   connectors:'grp-vocab', vocab:'grp-vocab', synonyms:'grp-vocab', expressions:'grp-vocab',
-  writing:'grp-exam', listening:'grp-exam', phrases:'grp-exam', sprechen:'grp-exam', exam:'grp-exam'
+  writing:'grp-output', listening:'grp-output', phrases:'grp-output', sprechen:'grp-output',
+  practice:'grp-practice',
+  exam:'grp-exam'
 };
 
 window.show = function(id) {
